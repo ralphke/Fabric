@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "product_id": "P001",
+      "name": "Analytics Platform License",
+      "category": "Software",
+      "price": 299.99,
+      "currency": "USD",
+      "in_stock": true
+    },
+    {
+      "product_id": "P002",
+      "name": "Data Integration Tool",
+      "category": "Software",
+      "price": 199.99,
+      "currency": "USD",
+      "in_stock": true
+    },
+    {
+      "product_id": "P003",
+      "name": "ML Model Training Credits",
+      "category": "Credits",
+      "price": 49.99,
+      "currency": "USD",
+      "in_stock": true
+    },
+    {
+      "product_id": "P004",
+      "name": "Real-Time Analytics Add-on",
+      "category": "Software",
+      "price": 149.99,
+      "currency": "USD",
+      "in_stock": true
+    },
+    {
+      "product_id": "P005",
+      "name": "Enterprise Support Package",
+      "category": "Service",
+      "price": 499.99,
+      "currency": "USD",
+      "in_stock": true
+    }
+  ]
+}

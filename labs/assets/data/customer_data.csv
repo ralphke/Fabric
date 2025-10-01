@@ -1,0 +1,11 @@
+customer_id,name,email,segment,signup_date,total_purchases,total_spent,churn_risk
+1001,Alice Johnson,alice.j@email.com,Enterprise,2023-01-15,45,15600.50,0.12
+1002,Bob Smith,bob.smith@email.com,SMB,2023-02-20,23,8400.25,0.28
+1003,Carol White,carol.w@email.com,Enterprise,2023-01-08,67,28900.75,0.08
+1004,David Brown,david.b@email.com,Startup,2023-03-12,12,3200.00,0.45
+1005,Emma Davis,emma.d@email.com,SMB,2023-02-01,34,12500.00,0.15
+1006,Frank Miller,frank.m@email.com,Enterprise,2023-01-25,89,45600.90,0.05
+1007,Grace Lee,grace.l@email.com,Startup,2023-03-05,8,2100.50,0.62
+1008,Henry Taylor,henry.t@email.com,SMB,2023-02-18,28,9800.00,0.22
+1009,Iris Chen,iris.c@email.com,Enterprise,2023-01-30,56,32400.00,0.10
+1010,Jack Wilson,jack.w@email.com,Startup,2023-03-20,15,4500.75,0.38
