@@ -72,6 +72,18 @@ Implement DevOps practices for Microsoft Fabric with continuous integration and 
 - Security and credential management
 - Monitoring and alerting
 
+### 6. [Zava Demo Data Upload](./notebooks/06_Zava_Demo_Upload.ipynb)
+Upload and configure the Zava demo sample data (e-commerce dataset) in your Fabric Lakehouse.
+
+**Topics covered:**
+- Reading parquet files from local directories
+- Uploading data to Fabric Lakehouse
+- Creating Delta tables from parquet files
+- Data validation and integrity checks
+- Sample analytics queries on e-commerce data
+- Best practices for organizing lakehouse data
+- Working with multi-table datasets
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -97,10 +109,11 @@ Implement DevOps practices for Microsoft Fabric with continuous integration and 
 For a structured learning experience, we recommend following the notebooks in this order:
 
 1. **Start with OneLake** to understand the foundational storage layer
-2. **Explore Real-Time Intelligence** for streaming scenarios
-3. **Learn Power BI Semantic Models** for reporting and analytics
-4. **Master Data Pipelines** for orchestration and automation
-5. **Implement CI/CD** to operationalize your solutions
+2. **Upload the Zava Demo Data** to have sample data for hands-on practice
+3. **Explore Real-Time Intelligence** for streaming scenarios
+4. **Learn Power BI Semantic Models** for reporting and analytics
+5. **Master Data Pipelines** for orchestration and automation
+6. **Implement CI/CD** to operationalize your solutions
 
 ## 🔗 Additional Resources
 
