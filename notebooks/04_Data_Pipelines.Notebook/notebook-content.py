@@ -1,5 +1,12 @@
 # Fabric notebook source
 
+# METADATA ********************
+
+# META {
+# META   "kernel_info": {
+# META     "name": "synapse_pyspark"
+# META   }
+# META }
 
 # MARKDOWN ********************
 
@@ -66,6 +73,13 @@ for pattern, steps in pipeline_patterns.items():
     for step in steps:
         print(f"  {step}")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 2. Creating Sample Source Data
@@ -100,6 +114,13 @@ print(f"Date range: {transactions['transaction_date'].min()} to {transactions['t
 print(f"Total value: ${transactions['total_amount'].sum():,.2f}")
 display(transactions.head())
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Save sample data to files (simulating source data)
@@ -121,6 +142,13 @@ transactions.to_parquet('/tmp/pipeline_data/transactions.parquet', index=False)
 print("✓ Saved transactions.parquet")
 
 print("\nSample files created in /tmp/pipeline_data/")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -206,6 +234,13 @@ pipeline_definition = {
 print("Sample Pipeline Definition:")
 print(json.dumps(pipeline_definition, indent=2))
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 5. Data Transformation Examples
@@ -227,6 +262,13 @@ print("Bronze Layer:")
 print(f"  Records: {len(bronze_transactions)}")
 print(f"  Columns: {list(bronze_transactions.columns)}")
 display(bronze_transactions.head(3))
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # CELL ********************
 
@@ -262,6 +304,13 @@ print("\nSilver Layer:")
 print(f"  Records: {len(silver_transactions)} (removed {len(bronze_transactions) - len(silver_transactions)} invalid records)")
 print(f"  Quality Score: {silver_transactions['data_quality_score'].mean():.1f}%")
 display(silver_transactions.head(3))
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # CELL ********************
 
@@ -320,6 +369,13 @@ display(gold_tables['product_metrics'].head(10))
 print("\nGold Layer - Top Customers:")
 top_customers = gold_tables['customer_metrics'].sort_values('total_spent', ascending=False).head(10)
 display(top_customers)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -385,6 +441,13 @@ new_transactions['transaction_date'] = datetime.now()
 incremental_data, new_count, updated_count, existing_count = incremental_load(
     new_transactions, transactions, 'transaction_id', 'transaction_date'
 )
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -458,6 +521,13 @@ finally:
     print("\nPipeline Metrics:")
     print(json.dumps(final_metrics, indent=2))
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 8. Pipeline Parameters and Variables
@@ -496,6 +566,13 @@ print(json.dumps(pipeline_parameters, indent=2))
 
 print("\nPipeline Variables:")
 print(json.dumps(pipeline_variables, indent=2))
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -560,6 +637,13 @@ print("Trigger Configuration Examples:")
 for trigger_name, config in trigger_examples.items():
     print(f"\n{trigger_name}:")
     print(json.dumps(config, indent=2))
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -640,6 +724,13 @@ def data_quality_checks(df, table_name):
 
 # Run quality checks
 quality_passed = data_quality_checks(transactions, 'Transactions')
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 

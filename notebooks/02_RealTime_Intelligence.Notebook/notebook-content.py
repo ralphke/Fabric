@@ -1,5 +1,12 @@
 # Fabric notebook source
 
+# METADATA ********************
+
+# META {
+# META   "kernel_info": {
+# META     "name": "synapse_pyspark"
+# META   }
+# META }
 
 # MARKDOWN ********************
 
@@ -78,6 +85,13 @@ df_readings = pd.DataFrame(sample_readings)
 print("Sample Sensor Readings:")
 display(df_readings.head(10))
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 2. Working with Event Streams
@@ -119,6 +133,13 @@ display(df_readings.head(10))
 
 print("Event Stream connections are typically configured through the Fabric portal")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 3. KQL (Kusto Query Language) Basics
@@ -142,6 +163,13 @@ df_spark.printSchema()
 print("\nWarning readings only:")
 df_warnings = df_spark.filter(col("status") == "warning")
 display(df_warnings)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -196,6 +224,13 @@ SensorReadings
 print("Common KQL Query Patterns:")
 print(kql_examples)
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 5. Real-Time Analytics Scenarios
@@ -237,6 +272,13 @@ if not alerts_df.empty:
 else:
     print("No threshold violations detected")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Scenario 2: Calculate moving averages
@@ -251,6 +293,13 @@ def calculate_moving_average(df, window_size=3):
 df_with_ma = calculate_moving_average(df_readings, window_size=3)
 print("\nReadings with Moving Average:")
 display(df_with_ma[['sensor_id', 'location', 'value', 'moving_avg', 'timestamp']].head(15))
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # CELL ********************
 
@@ -267,6 +316,13 @@ aggregated = df_readings_copy.groupby(['location', 'type', 'time_bucket']).agg({
 aggregated.columns = ['avg_value', 'min_value', 'max_value', 'std_value', 'reading_count']
 print("\nAggregated readings by location and time:")
 display(aggregated.head(10))
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -322,6 +378,13 @@ SensorReadings
 
 print("Sample Dashboard Queries:")
 print(dashboard_queries)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -381,6 +444,13 @@ if all_triggers:
 else:
     print("\nNo activator triggers detected")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 8. Best Practices for Real-Time Intelligence
@@ -437,6 +507,13 @@ def validate_streaming_data(df):
 
 validate_streaming_data(df_readings)
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 9. Integration with Other Fabric Services
@@ -484,6 +561,13 @@ df_archive = spark.createDataFrame(df_readings.values.tolist(), schema)
 
 print("Streaming data can be archived to OneLake for long-term storage and analysis")
 print(f"Sample data shape: {df_archive.count()} rows")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 

@@ -1,5 +1,12 @@
 # Fabric notebook source
 
+# METADATA ********************
+
+# META {
+# META   "kernel_info": {
+# META     "name": "synapse_pyspark"
+# META   }
+# META }
 
 # MARKDOWN ********************
 
@@ -90,6 +97,13 @@ Repository/
 print("Fabric Git Repository Structure:")
 print(fabric_git_structure)
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 3. Environment Configuration
@@ -137,6 +151,13 @@ os.makedirs('/tmp/cicd_config', exist_ok=True)
 with open('/tmp/cicd_config/environments.json', 'w') as f:
     json.dump(environments, f, indent=2)
 print("\n✓ Configuration saved to /tmp/cicd_config/environments.json")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -260,6 +281,13 @@ print(azure_devops_pipeline)
 with open('/tmp/cicd_config/azure-pipelines.yml', 'w') as f:
     f.write(azure_devops_pipeline)
 print("\n✓ Pipeline saved to /tmp/cicd_config/azure-pipelines.yml")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -399,6 +427,13 @@ with open('/tmp/cicd_config/fabric-cicd.yml', 'w') as f:
     f.write(github_actions_workflow)
 print("\n✓ Workflow saved to /tmp/cicd_config/fabric-cicd.yml")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 6. Validation Scripts
@@ -493,6 +528,13 @@ with open('/tmp/cicd_config/validate_notebooks.py', 'w') as f:
     f.write(notebook_validator)
 print("\n✓ Script saved to /tmp/cicd_config/validate_notebooks.py")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Pipeline validation script
@@ -573,6 +615,13 @@ print(pipeline_validator)
 with open('/tmp/cicd_config/validate_pipelines.py', 'w') as f:
     f.write(pipeline_validator)
 print("\n✓ Script saved to /tmp/cicd_config/validate_pipelines.py")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -731,6 +780,13 @@ with open('/tmp/cicd_config/deploy_to_fabric.py', 'w') as f:
     f.write(deployment_script)
 print("\n✓ Script saved to /tmp/cicd_config/deploy_to_fabric.py")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 8. Testing Strategy
@@ -787,6 +843,13 @@ def test_spark_transformation(spark, sample_data):
 
 print("Unit Test Example:")
 print(unit_test_example)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -868,6 +931,13 @@ monitoring_config = {
 
 print("Monitoring Configuration:")
 print(json.dumps(monitoring_config, indent=2))
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 

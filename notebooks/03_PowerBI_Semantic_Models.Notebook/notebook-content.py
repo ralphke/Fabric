@@ -1,5 +1,12 @@
 # Fabric notebook source
 
+# METADATA ********************
+
+# META {
+# META   "kernel_info": {
+# META     "name": "synapse_pyspark"
+# META   }
+# META }
 
 # MARKDOWN ********************
 
@@ -62,6 +69,13 @@ dim_date = pd.DataFrame({
 print(f"✓ Created Date dimension: {len(dim_date)} rows")
 display(dim_date.head())
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Product dimension
@@ -85,6 +99,13 @@ dim_product = pd.DataFrame(products, columns=[
 print(f"✓ Created Product dimension: {len(dim_product)} rows")
 display(dim_product)
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Customer dimension
@@ -103,6 +124,13 @@ dim_customer = pd.DataFrame({
 
 print(f"✓ Created Customer dimension: {len(dim_customer)} rows")
 display(dim_customer.head())
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # CELL ********************
 
@@ -146,6 +174,13 @@ print(f"  Total Quantity: {fact_sales['Quantity'].sum():,}")
 print(f"  Average Order Value: ${fact_sales['SalesAmount'].mean():,.2f}")
 display(fact_sales.head())
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 2. Saving Data to OneLake
@@ -174,6 +209,13 @@ for table_name, df_pandas in tables.items():
     print(f"✓ {table_name} ready to save ({len(df_pandas)} rows)")
 
 print("\n✓ All tables prepared for semantic model")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -293,6 +335,13 @@ Running Total Sales =
 print("Common DAX Measures for Sales Semantic Model:")
 print(dax_measures)
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 6. Implementing Calculations in Python
@@ -329,6 +378,13 @@ for metric, value in metrics.items():
     else:
         print(f"  {metric}: {value:,.0f}")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Sales by Category
@@ -346,6 +402,13 @@ category_sales = category_sales.sort_values('Total Sales', ascending=False)
 print("\nSales by Category:")
 display(category_sales)
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Top 10 Products by Sales
@@ -362,6 +425,13 @@ top_products = product_sales.sort_values('Total Sales', ascending=False).head(10
 print("\nTop 10 Products by Sales:")
 display(top_products)
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Monthly Sales Trend
@@ -377,6 +447,13 @@ monthly_trend['Moving Avg (3M)'] = monthly_trend['Total Sales'].rolling(window=3
 
 print("\nMonthly Sales Trend (Last 12 months):")
 display(monthly_trend.tail(12))
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -414,6 +491,13 @@ rls_examples = """
 
 print("Row-Level Security Examples:")
 print(rls_examples)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -464,6 +548,13 @@ results = cursor.fetchall()
 
 print("\nPython Code for Querying Semantic Model:")
 print(python_code)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -517,6 +608,13 @@ print(status_response.json())
 
 print("Semantic Model Refresh via REST API:")
 print(rest_api_example)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
