@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
     "type": "Notebook",
-    "displayName": "03_PowerBI_Semantic_Models",
+    "displayName": "01_OneLake_Introduction(1)(1)",
     "description": "New notebook"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "925dd162-c4dc-997b-4914-8cf84563301d"
+    "logicalId": "4edcb553-3ee7-9888-4099-5e92d09c32da"
   }
 }

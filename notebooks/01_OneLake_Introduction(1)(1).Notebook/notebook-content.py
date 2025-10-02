@@ -1,5 +1,12 @@
 # Fabric notebook source
 
+# METADATA ********************
+
+# META {
+# META   "kernel_info": {
+# META     "name": "synapse_pyspark"
+# META   }
+# META }
 
 # MARKDOWN ********************
 
@@ -43,6 +50,13 @@ from pyspark.sql.types import *
 print(f"Spark Version: {spark.version}")
 print(f"Application Name: {spark.sparkContext.appName}")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 2. Reading Data from OneLake
@@ -59,6 +73,13 @@ print(f"Application Name: {spark.sparkContext.appName}")
 
 print("To read CSV files, use: spark.read.csv(path, header=True, inferSchema=True)")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Example: Reading Parquet data from OneLake
@@ -68,6 +89,13 @@ print("To read CSV files, use: spark.read.csv(path, header=True, inferSchema=Tru
 
 print("To read Parquet files, use: spark.read.parquet(path)")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Example: Reading Delta tables from OneLake
@@ -76,6 +104,13 @@ print("To read Parquet files, use: spark.read.parquet(path)")
 # display(df_delta.limit(10))
 
 print("To read Delta tables, use: spark.read.format('delta').load(path)")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -120,6 +155,13 @@ df_sales = spark.createDataFrame(sample_data, schema)
 display(df_sales.limit(10))
 print(f"Total records: {df_sales.count()}")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 4. Writing Data to OneLake
@@ -139,6 +181,13 @@ df_sales.write.format("delta") \
 
 print(f"Data written to Delta table: {delta_table_name}")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Write as Parquet files
@@ -146,6 +195,13 @@ df_sales.write.mode("overwrite") \
     .parquet("Files/sales_parquet")
 
 print("Data written to Parquet format")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -173,6 +229,13 @@ result = spark.sql("""
 
 display(result)
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 6. Data Transformations
@@ -190,6 +253,13 @@ df_enriched = df_sales \
 
 display(df_enriched.limit(10))
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Aggregations
@@ -204,6 +274,13 @@ monthly_summary = df_enriched \
     .orderBy("Year", "Month", "Region")
 
 display(monthly_summary)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -231,6 +308,13 @@ display(monthly_summary)
 
 print("Shortcuts provide seamless access to external data without data movement")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 8. Delta Lake Features
@@ -247,6 +331,13 @@ print("Shortcuts provide seamless access to external data without data movement"
 
 print("Delta Lake supports time travel to query historical data versions")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Get table history
@@ -257,6 +348,13 @@ from delta.tables import DeltaTable
 # display(history_df)
 
 print("Delta tables maintain complete history of all operations")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -281,6 +379,13 @@ print("Delta tables maintain complete history of all operations")
 # spark.sql(f"OPTIMIZE delta.`Tables/{delta_table_name}` ZORDER BY (Region, Product)")
 
 print("OPTIMIZE command compacts small files and improves query performance")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 

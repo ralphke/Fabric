@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
     "type": "Notebook",
-    "displayName": "05_CICD_Pipelines",
+    "displayName": "02_RealTime_Intelligence(1)(1)",
     "description": "New notebook"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "db0f4ca4-3f8d-900e-4523-97f5c78ac555"
+    "logicalId": "d16e4900-73fb-9b34-4dbb-8bd2827221c9"
   }
 }

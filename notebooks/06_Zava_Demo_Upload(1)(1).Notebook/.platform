@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
     "type": "Notebook",
-    "displayName": "01_OneLake_Introduction",
+    "displayName": "06_Zava_Demo_Upload(1)(1)",
     "description": "New notebook"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "e4b274fc-e309-9ff7-41f1-7ff541057c35"
+    "logicalId": "922bfd61-4c1c-8fd6-4aa5-bf18c686f53c"
   }
 }
