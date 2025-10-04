@@ -1,5 +1,12 @@
 # Fabric notebook source
 
+# METADATA ********************
+
+# META {
+# META   "kernel_info": {
+# META     "name": "synapse_pyspark"
+# META   }
+# META }
 
 # MARKDOWN ********************
 
@@ -45,6 +52,13 @@ print(f"Spark Version: {spark.version}")
 print(f"Application Name: {spark.sparkContext.appName}")
 print("\nEnvironment ready for data upload!")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 2. Define Source Data Location
@@ -79,6 +93,13 @@ print(f"Files to upload: {len(files_to_upload)}")
 for f in files_to_upload:
     print(f"  - {f}")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 3. Read and Explore the Parquet Files
@@ -102,6 +123,13 @@ print(f"\nTotal Customers: {df_customers.count()}")
 print("\nSample Data:")
 display(df_customers.limit(5))
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ### 3.2 Products Data
@@ -121,6 +149,13 @@ display(df_products.limit(5))
 
 print("\nProduct Categories:")
 display(df_products.groupBy("category").count().orderBy("category"))
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -142,6 +177,13 @@ display(df_orders.limit(5))
 print("\nOrder Status Distribution:")
 display(df_orders.groupBy("order_status").count().orderBy("order_status"))
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ### 3.4 Order Items Data
@@ -159,6 +201,13 @@ print(f"\nTotal Order Items: {df_order_items.count()}")
 print("\nSample Data:")
 display(df_order_items.limit(5))
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ### 3.5 Sales Performance Data
@@ -175,6 +224,13 @@ df_sales_performance.printSchema()
 print(f"\nTotal Records: {df_sales_performance.count()}")
 print("\nSample Data:")
 display(df_sales_performance.limit(10))
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -202,6 +258,13 @@ df_customers.write.format("delta") \
 print(f"✓ Created Delta table: {table_name}")
 print(f"  Records: {df_customers.count()}")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ### 4.2 Create Products Table
@@ -217,6 +280,13 @@ df_products.write.format("delta") \
 
 print(f"✓ Created Delta table: {table_name}")
 print(f"  Records: {df_products.count()}")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -234,6 +304,13 @@ df_orders.write.format("delta") \
 print(f"✓ Created Delta table: {table_name}")
 print(f"  Records: {df_orders.count()}")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ### 4.4 Create Order Items Table
@@ -250,6 +327,13 @@ df_order_items.write.format("delta") \
 print(f"✓ Created Delta table: {table_name}")
 print(f"  Records: {df_order_items.count()}")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ### 4.5 Create Sales Performance Table
@@ -265,6 +349,13 @@ df_sales_performance.write.format("delta") \
 
 print(f"✓ Created Delta table: {table_name}")
 print(f"  Records: {df_sales_performance.count()}")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -293,6 +384,13 @@ for table_name, df in tables:
 
 print("=" * 60)
 print("\nAll Zava demo data has been successfully uploaded!")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -327,6 +425,13 @@ top_customers = spark.sql("""
 print("Top 10 Customers by Total Spending:")
 display(top_customers)
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ### 6.2 Sales by Product Category
@@ -351,6 +456,13 @@ sales_by_category = spark.sql("""
 print("Sales by Product Category:")
 display(sales_by_category)
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ### 6.3 Monthly Order Trends
@@ -371,6 +483,13 @@ monthly_trends = spark.sql("""
 
 print("Monthly Order Trends:")
 display(monthly_trends)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -397,6 +516,13 @@ top_products = spark.sql("""
 print("Top 10 Products by Revenue:")
 display(top_products)
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ### 6.5 Order Status Distribution
@@ -417,6 +543,13 @@ status_distribution = spark.sql("""
 
 print("Order Status Distribution:")
 display(status_distribution)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -460,6 +593,13 @@ print(f"Orders: {total_orders} total, {orders_with_items} have items")
 print("=" * 60)
 print("\n✓ Data relationships verified successfully!")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ## 8. Copy Files to Lakehouse Files Section (Optional)
@@ -486,6 +626,13 @@ for file_name in files_to_upload:
 
 print("=" * 60)
 print("\nAll files copied successfully!")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
