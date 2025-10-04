@@ -11,8 +11,32 @@
 
 # CELL ********************
 
-# Welcome to your new notebook
-# Type here in the cell editor to add code!
+from azure.identity import DefaultAzureCredential
+from azure.storage.filedatalake import DataLakeServiceClient
+
+# Replace with your actual workspace and lakehouse names
+workspace_name = "Learning-Fabric-Workspace"
+lakehouse_name = "Zava_Lakehouse"
+file_path_local = "customers.parquet"
+file_path_onelake = "Files/customers.parquet"
+
+# Authenticate using DefaultAzureCredential (requires az login)
+credential = DefaultAzureCredential()
+
+# Construct OneLake URL
+account_url = f"https://onelake.dfs.fabric.microsoft.com"
+filesystem_name = workspace_name
+directory_name = f"{lakehouse_name}.lakehouse"
+
+# Create service client
+service_client = DataLakeServiceClient(account_url=account_url, credential=credential)
+
+# Get filesystem and directory clients
+filesystem_client = service_client.get_file_system_client(filesystem_name)
+directory_client = filesystem_client.get_directory_client(directory_name)
+
+
+
 
 
 # METADATA ********************
@@ -26,6 +50,7 @@
 
 # Import necessary libraries
 import pandas as pd
+import requests 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
@@ -75,8 +100,24 @@ for f in files_to_upload:
 # CELL ********************
 
 # Read customers parquet file
-customers_path = os.path.join(source_dir, "customers.parquet")
-df_customers = spark.read.parquet(customers_path)
+customers_path = source_dir + "customers.parquet"
+response = requests.get(customers_path) #, stream=True)
+response.raise_for_status()
+if response.status_code == 200:
+    content = response.content  # For binary files
+    # print(content)
+else:
+    print(f"Failed to fetch file: {response.status_code}")
+
+# Upload the file
+file_client = directory_client.create_file(file_path_onelake)
+file_client.append_data(data=content, offset=0, length=len(content))
+file_client.flush_data(len(content))
+
+print("✅ File uploaded to OneLake successfully!")
+
+
+df_customers = spark.read.parquet(tmp_path)
 
 print("Customers Schema:")
 df_customers.printSchema()

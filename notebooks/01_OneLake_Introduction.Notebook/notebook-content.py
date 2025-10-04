@@ -5,6 +5,18 @@
 # META {
 # META   "kernel_info": {
 # META     "name": "synapse_pyspark"
+# META   },
+# META   "dependencies": {
+# META     "lakehouse": {
+# META       "default_lakehouse": "9ef2f10f-d9a6-45da-90f6-0e17841b6d90",
+# META       "default_lakehouse_name": "Zava_Lakehouse",
+# META       "default_lakehouse_workspace_id": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+# META       "known_lakehouses": [
+# META         {
+# META           "id": "9ef2f10f-d9a6-45da-90f6-0e17841b6d90"
+# META         }
+# META       ]
+# META     }
 # META   }
 # META }
 
@@ -82,10 +94,48 @@ print("To read CSV files, use: spark.read.csv(path, header=True, inferSchema=Tru
 
 # CELL ********************
 
+# MAGIC %%sql
+# MAGIC SHOW DATABASES
+
+# METADATA ********************
+
+# META {
+# META   "language": "sparksql",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+# MAGIC %%sql
+# MAGIC -- Validate if any tables are already in existance
+# MAGIC SHOW TABLES
+
+# METADATA ********************
+
+# META {
+# META   "language": "sparksql",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+# MAGIC %%sql
+# MAGIC select * from Zava_Lakehouse.customers LIMIT 10
+
+# METADATA ********************
+
+# META {
+# META   "language": "sparksql",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
 # Example: Reading Parquet data from OneLake
-# parquet_path = "Files/sample_data.parquet"
-# df_parquet = spark.read.parquet(parquet_path)
-# display(df_parquet.limit(10))
+parquet_path = "Files/sales_parquet"
+df_parquet = spark.read.parquet(parquet_path)
+df_parquet.printSchema()
+display(df_parquet.limit(10))
 
 print("To read Parquet files, use: spark.read.parquet(path)")
 
@@ -99,9 +149,9 @@ print("To read Parquet files, use: spark.read.parquet(path)")
 # CELL ********************
 
 # Example: Reading Delta tables from OneLake
-# delta_table_path = "Tables/sales_data"
-# df_delta = spark.read.format("delta").load(delta_table_path)
-# display(df_delta.limit(10))
+delta_table_path = "Tables/customers"
+df_delta = spark.read.format("delta").load(delta_table_path)
+display(df_delta.limit(10))
 
 print("To read Delta tables, use: spark.read.format('delta').load(path)")
 
@@ -121,12 +171,15 @@ print("To read Delta tables, use: spark.read.format('delta').load(path)")
 # CELL ********************
 
 # Create sample sales data
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DoubleType, DateType
 from datetime import datetime, timedelta
 import random
 
+
+
 # Generate sample data
 sample_data = []
-start_date = datetime(2024, 1, 1)
+start_date = datetime(2025, 1, 1)
 products = ['Laptop', 'Phone', 'Tablet', 'Monitor', 'Keyboard']
 regions = ['North', 'South', 'East', 'West']
 
@@ -147,7 +200,7 @@ schema = StructType([
     StructField("Region", StringType(), False),
     StructField("Quantity", IntegerType(), False),
     StructField("Amount", DoubleType(), False),
-    StructField("OrderDate", TimestampType(), False)
+    StructField("OrderDate", DateType(), False)
 ])
 
 # Create DataFrame
@@ -195,6 +248,7 @@ df_sales.write.mode("overwrite") \
     .parquet("Files/sales_parquet")
 
 print("Data written to Parquet format")
+display(df_sales)
 
 # METADATA ********************
 
@@ -244,6 +298,7 @@ display(result)
 
 # CELL ********************
 
+from pyspark.sql.functions import round, year, month, quarter, col
 # Add calculated columns
 df_enriched = df_sales \
     .withColumn("UnitPrice", round(col("Amount") / col("Quantity"), 2)) \
@@ -262,6 +317,7 @@ display(df_enriched.limit(10))
 
 # CELL ********************
 
+from pyspark.sql.functions import count,avg, sum
 # Aggregations
 monthly_summary = df_enriched \
     .groupBy("Year", "Month", "Region") \
@@ -303,8 +359,8 @@ display(monthly_summary)
 
 # Once shortcuts are created, they appear as regular folders/tables
 # Example: reading from a shortcut
-# df_shortcut = spark.read.format("delta").load("Tables/external_data_shortcut")
-# display(df_shortcut.limit(10))
+df_shortcut = spark.read.format("delta").load("Tables/sales_performance")
+display(df_shortcut.limit(10))
 
 print("Shortcuts provide seamless access to external data without data movement")
 
@@ -323,11 +379,22 @@ print("Shortcuts provide seamless access to external data without data movement"
 
 # CELL ********************
 
+delta_table_name = "sales_demo"
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
 # Time Travel - Query historical versions of data
-# df_version = spark.read.format("delta") \
-#     .option("versionAsOf", 0) \
-#     .load(f"Tables/{delta_table_name}")
-# display(df_version)
+df_version = spark.read.format("delta") \
+     .option("versionAsOf", 0) \
+     .load(f"Tables/{delta_table_name}")
+display(df_version)
 
 print("Delta Lake supports time travel to query historical data versions")
 
@@ -343,9 +410,9 @@ print("Delta Lake supports time travel to query historical data versions")
 # Get table history
 from delta.tables import DeltaTable
 
-# dt = DeltaTable.forPath(spark, f"Tables/{delta_table_name}")
-# history_df = dt.history()
-# display(history_df)
+dt = DeltaTable.forPath(spark, f"Tables/{delta_table_name}")
+history_df = dt.history()
+display(history_df)
 
 print("Delta tables maintain complete history of all operations")
 
@@ -375,8 +442,8 @@ print("Delta tables maintain complete history of all operations")
 # CELL ********************
 
 # Example: Optimize Delta table
-# spark.sql(f"OPTIMIZE delta.`Tables/{delta_table_name}`")
-# spark.sql(f"OPTIMIZE delta.`Tables/{delta_table_name}` ZORDER BY (Region, Product)")
+spark.sql(f"OPTIMIZE delta.`Tables/{delta_table_name}`")
+spark.sql(f"OPTIMIZE delta.`Tables/{delta_table_name}` ZORDER BY (Region, Product)")
 
 print("OPTIMIZE command compacts small files and improves query performance")
 
