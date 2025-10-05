@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "08_Load_AdventureWorksDW(1)",
+    "description": "New notebook loading AdventureWorksDW Database into the lakehouse and autmatically convert the files to delta format."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2fe1a681-377d-b57a-47ce-19aadad76b08"
+  }
+}
