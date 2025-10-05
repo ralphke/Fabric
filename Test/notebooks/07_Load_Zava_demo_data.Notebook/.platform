@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "07_Load_Zava_demo_data",
+    "description": "Sample Notebook to work with Fabric in a notebook"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4c43dedc-b329-afaf-4060-d792e25e57d5"
+  }
+}
