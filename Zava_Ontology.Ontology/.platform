@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Ontology",
+    "displayName": "Zava_Ontology"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fc691eb7-1208-9be4-460d-d287e6c8039c"
+  }
+}
