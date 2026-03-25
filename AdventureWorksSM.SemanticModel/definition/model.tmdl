@@ -1,0 +1,39 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DirectLake - AdventureWorksDW"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DirectLakeOnOneLakeInWeb","WebModelingEdit"]
+
+ref table DimAccount
+ref table DimGeography
+ref table DimDate
+ref table DimProductSubcategory
+ref table DimEmployee
+ref table DimDepartmentGroup
+ref table DimProductCategory
+ref table FactSalesQuota
+ref table DimCurrency
+ref table FactProductInventory
+ref table FactCallCenter
+ref table DimReseller
+ref table DimProduct
+ref table FactCurrencyRate
+ref table FactInternetSalesReason
+ref table DimSalesTerritory
+ref table FactResellerSales
+ref table FactInternetSales
+ref table FactFinance
+ref table DimSalesReason
+ref table DimOrganization
+ref table DimScenario
+ref table DimCustomer
+ref table DimPromotion
+

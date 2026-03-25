@@ -1,0 +1,68 @@
+table DimProductSubcategory
+	lineageTag: 0f701cfc-b19c-4de1-b805-c33fc1ce71e1
+	sourceLineageTag: [dbo].[DimProductSubcategory]
+
+	column ProductSubcategoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: acf8f7fa-2a70-4073-a1ad-f24b6b07b34c
+		sourceLineageTag: ProductSubcategoryKey
+		summarizeBy: none
+		sourceColumn: ProductSubcategoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductSubcategoryAlternateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: cfe3eb21-4b45-4bb1-a8b7-aa730be47840
+		sourceLineageTag: ProductSubcategoryAlternateKey
+		summarizeBy: count
+		sourceColumn: ProductSubcategoryAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishProductSubcategoryName
+		dataType: string
+		lineageTag: 608a42fa-44c6-4345-bfab-c159a23a8fbf
+		sourceLineageTag: EnglishProductSubcategoryName
+		summarizeBy: none
+		sourceColumn: EnglishProductSubcategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpanishProductSubcategoryName
+		dataType: string
+		lineageTag: e5ca9e0e-111b-49c8-8163-d6169d060946
+		sourceLineageTag: SpanishProductSubcategoryName
+		summarizeBy: none
+		sourceColumn: SpanishProductSubcategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrenchProductSubcategoryName
+		dataType: string
+		lineageTag: 024f7283-37ca-461b-8718-8eef5cca49f8
+		sourceLineageTag: FrenchProductSubcategoryName
+		summarizeBy: none
+		sourceColumn: FrenchProductSubcategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCategoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 7ae82931-07a4-4235-a350-f9edd188ed21
+		sourceLineageTag: ProductCategoryKey
+		summarizeBy: none
+		sourceColumn: ProductCategoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProductSubcategory = entity
+		mode: directLake
+		source
+			entityName: DimProductSubcategory
+			schemaName: dbo
+			expressionSource: 'DirectLake - AdventureWorksDW'
+

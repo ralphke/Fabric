@@ -1,0 +1,40 @@
+table FactInternetSalesReason
+	lineageTag: 90400781-3599-4fdf-8041-fa35d9382c48
+	sourceLineageTag: [dbo].[FactInternetSalesReason]
+
+	column SalesOrderNumber
+		dataType: string
+		lineageTag: e24e240d-1e02-4f8b-8b90-570e24695ce6
+		sourceLineageTag: SalesOrderNumber
+		summarizeBy: none
+		sourceColumn: SalesOrderNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesOrderLineNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 8ffb2d2b-8047-4149-8a61-01dd3c2fae85
+		sourceLineageTag: SalesOrderLineNumber
+		summarizeBy: sum
+		sourceColumn: SalesOrderLineNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesReasonKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 249ace41-4bfe-48c5-8cb5-64771687bb52
+		sourceLineageTag: SalesReasonKey
+		summarizeBy: count
+		sourceColumn: SalesReasonKey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactInternetSalesReason = entity
+		mode: directLake
+		source
+			entityName: FactInternetSalesReason
+			schemaName: dbo
+			expressionSource: 'DirectLake - AdventureWorksDW'
+

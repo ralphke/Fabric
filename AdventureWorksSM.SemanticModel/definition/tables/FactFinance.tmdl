@@ -1,0 +1,92 @@
+table FactFinance
+	lineageTag: 8412c2b5-df20-48fc-8192-b0d366a97b3a
+	sourceLineageTag: [dbo].[FactFinance]
+
+	column FinanceKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 347cb8c9-7dd1-4adb-92b2-528092176a93
+		sourceLineageTag: FinanceKey
+		summarizeBy: count
+		sourceColumn: FinanceKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: bb925e31-e58d-446d-9175-d31daed6bbbd
+		sourceLineageTag: DateKey
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrganizationKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 243e8291-facd-44f3-9f81-5c80c86910dc
+		sourceLineageTag: OrganizationKey
+		summarizeBy: none
+		sourceColumn: OrganizationKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentGroupKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d615dfad-df37-4b3d-a706-87be548a6e1b
+		sourceLineageTag: DepartmentGroupKey
+		summarizeBy: count
+		sourceColumn: DepartmentGroupKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScenarioKey
+		dataType: int64
+		formatString: 0
+		lineageTag: b8ba189b-52ad-4fd5-89e4-5effece72db4
+		sourceLineageTag: ScenarioKey
+		summarizeBy: count
+		sourceColumn: ScenarioKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 71ef00a5-e8a2-4713-8fa1-4518e49be099
+		sourceLineageTag: AccountKey
+		summarizeBy: none
+		sourceColumn: AccountKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: double
+		lineageTag: 6a5065b3-a24b-48cc-a4f1-7bd9bc4558c7
+		sourceLineageTag: Amount
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MSSQL_System_Uniquifier_482100758
+		dataType: int64
+		formatString: 0
+		lineageTag: 0936e1b7-5afb-4c92-a9eb-3d7bff6f7d6b
+		sourceLineageTag: MSSQL_System_Uniquifier_482100758
+		summarizeBy: sum
+		sourceColumn: MSSQL_System_Uniquifier_482100758
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactFinance = entity
+		mode: directLake
+		source
+			entityName: FactFinance
+			schemaName: dbo
+			expressionSource: 'DirectLake - AdventureWorksDW'
+

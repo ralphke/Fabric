@@ -1,0 +1,11 @@
+expression 'DirectLake - AdventureWorksDW' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/524dfea1-0c59-477f-81bd-f4ad4461d8b9/d3da9d6e-94db-4ad4-b139-447fc68c7900", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: fc688a68-31a1-4381-bfe4-0bc34b3c845d
+
+	annotation PBI_IncludeFutureArtifacts = False
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[AdventureWorksDWBuildVersion]"}},"objectType":"Table"}]
+

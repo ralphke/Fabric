@@ -1,0 +1,52 @@
+table FactSalesQuota
+	lineageTag: 7d6ebf64-ad03-4681-bdbd-4d32d855ede0
+	sourceLineageTag: [dbo].[FactSalesQuota]
+
+	column SalesQuotaKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d2dac1a5-bba4-451d-810f-c4393276aaec
+		sourceLineageTag: SalesQuotaKey
+		summarizeBy: count
+		sourceColumn: SalesQuotaKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmployeeKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d48ff960-60dc-4ee9-bfcf-3a4dee1130d5
+		sourceLineageTag: EmployeeKey
+		summarizeBy: none
+		sourceColumn: EmployeeKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 30aa1f9b-5493-4522-aa5f-5857b95fb296
+		sourceLineageTag: DateKey
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesAmountQuota
+		dataType: double
+		lineageTag: 95f2bfd4-fdd0-4865-b982-90abd649b4a9
+		sourceLineageTag: SalesAmountQuota
+		summarizeBy: sum
+		sourceColumn: SalesAmountQuota
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition FactSalesQuota = entity
+		mode: directLake
+		source
+			entityName: FactSalesQuota
+			schemaName: dbo
+			expressionSource: 'DirectLake - AdventureWorksDW'
+

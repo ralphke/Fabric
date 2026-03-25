@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/variableLibrary/definition/variables/1.0.0/schema.json",
+  "variables": [
+    {
+      "name": "DATABASE_NAME",
+      "note": "",
+      "type": "String",
+      "value": "RAKETEDB_DEV"
+    },
+    {
+      "name": "SECRET_KEY",
+      "note": "",
+      "type": "String",
+      "value": "your-secret-key-here-change-in-production"
+    },
+    {
+      "name": "LAKEHOUSE_REFERENCE",
+      "note": "",
+      "type": "ItemReference",
+      "value": {
+        "itemId": "9ef2f10f-d9a6-45da-90f6-0e17841b6d90",
+        "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9"
+      }
+    }
+  ]
+}

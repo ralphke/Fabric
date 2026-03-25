@@ -1,0 +1,53 @@
+table FactCurrencyRate
+	lineageTag: c24263e2-f7c0-4ac9-8d71-94a247a5954a
+	sourceLineageTag: [dbo].[FactCurrencyRate]
+
+	column CurrencyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: e464d78e-d993-49c6-8ebd-74d5c8559349
+		sourceLineageTag: CurrencyKey
+		summarizeBy: count
+		sourceColumn: CurrencyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 6933a426-7d30-404d-b5c5-9b7546d45638
+		sourceLineageTag: DateKey
+		summarizeBy: count
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column AverageRate
+		dataType: double
+		lineageTag: f5bc0fd4-cab5-4bc4-acd0-4a7409cb203a
+		sourceLineageTag: AverageRate
+		summarizeBy: sum
+		sourceColumn: AverageRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EndOfDayRate
+		dataType: double
+		lineageTag: 34bee674-6742-4fab-9b59-d39b6754ccb3
+		sourceLineageTag: EndOfDayRate
+		summarizeBy: sum
+		sourceColumn: EndOfDayRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition FactCurrencyRate = entity
+		mode: directLake
+		source
+			entityName: FactCurrencyRate
+			schemaName: dbo
+			expressionSource: 'DirectLake - AdventureWorksDW'
+

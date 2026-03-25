@@ -1,0 +1,30 @@
+table DimScenario
+	lineageTag: 49eef4b5-dcd0-43f8-837b-c69c97ab8930
+	sourceLineageTag: [dbo].[DimScenario]
+
+	column ScenarioKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a3b979d-c804-45b3-b973-0c12a9313ceb
+		sourceLineageTag: ScenarioKey
+		summarizeBy: count
+		sourceColumn: ScenarioKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScenarioName
+		dataType: string
+		lineageTag: b70468e9-5546-49ba-b45f-4e8c9962826b
+		sourceLineageTag: ScenarioName
+		summarizeBy: none
+		sourceColumn: ScenarioName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimScenario = entity
+		mode: directLake
+		source
+			entityName: DimScenario
+			schemaName: dbo
+			expressionSource: 'DirectLake - AdventureWorksDW'
+

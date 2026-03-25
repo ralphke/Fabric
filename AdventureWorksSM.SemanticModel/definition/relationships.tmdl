@@ -1,0 +1,88 @@
+relationship 0c449e5f-d533-3c3a-627b-04bb8624a9a7
+	fromColumn: FactInternetSales.CustomerKey
+	toColumn: DimCustomer.CustomerKey
+
+relationship 4d21b5e1-c579-2a71-1cea-f353b5385899
+	fromColumn: FactInternetSales.OrderDateKey
+	toColumn: DimDate.DateKey
+
+relationship e142bb27-f33f-e96b-0450-f6390f46e8a1
+	isActive: false
+	fromColumn: FactInternetSales.DueDateKey
+	toColumn: DimDate.DateKey
+
+relationship 6715a4ef-190f-01c3-de86-5b2037e11c00
+	isActive: false
+	fromColumn: FactInternetSales.ShipDateKey
+	toColumn: DimDate.DateKey
+
+relationship 9f89b0e3-09b6-09df-3e62-86c7143e0885
+	fromColumn: FactInternetSales.ProductKey
+	toColumn: DimProduct.ProductKey
+
+relationship 444c3de1-729c-1da0-e744-c12b49d7a289
+	fromColumn: FactResellerSales.ResellerKey
+	toColumn: DimReseller.ResellerKey
+
+relationship a1f0afe4-ece8-ec61-75e6-199a9092db06
+	fromColumn: FactResellerSales.ProductKey
+	toColumn: DimProduct.ProductKey
+
+relationship 77911070-e91d-a84b-1be1-a2d220a7f2ba
+	fromColumn: DimCustomer.GeographyKey
+	toColumn: DimGeography.GeographyKey
+
+relationship fee31bf2-58cf-a586-52c3-7762ad8e7392
+	fromColumn: DimReseller.GeographyKey
+	toColumn: DimGeography.GeographyKey
+
+relationship 900ef183-d426-7359-ac78-79bb92a46437
+	fromColumn: FactResellerSales.OrderDateKey
+	toColumn: DimDate.DateKey
+
+relationship 20e60a76-73d1-a1d1-b5bc-7554b7e2d352
+	isActive: false
+	fromColumn: FactResellerSales.DueDateKey
+	toColumn: DimDate.DateKey
+
+relationship e00ca924-34f7-a1c8-02d5-52a80be5c337
+	isActive: false
+	fromColumn: FactResellerSales.ShipDateKey
+	toColumn: DimDate.DateKey
+
+relationship 343c87da-2458-40cc-e537-7e60bca6e62d
+	fromColumn: DimProduct.ProductSubcategoryKey
+	toColumn: DimProductSubcategory.ProductSubcategoryKey
+
+relationship 2498799c-1c60-edfb-d948-a82c86ff6e7b
+	fromColumn: DimProductSubcategory.ProductCategoryKey
+	toColumn: DimProductCategory.ProductCategoryKey
+
+relationship 464e6a01-b748-cc13-1bd8-023294508ae7
+	fromColumn: FactFinance.AccountKey
+	toColumn: DimAccount.AccountKey
+
+relationship 5587fba4-b497-f15d-4fa8-938d3aadca8b
+	fromColumn: FactFinance.OrganizationKey
+	toColumn: DimOrganization.OrganizationKey
+
+relationship 9e0c40c2-27cf-25e8-fa20-5907abce2eab
+	fromColumn: FactFinance.DateKey
+	toColumn: DimDate.DateKey
+
+relationship 3fa6a35a-7e77-4125-2139-10c3c42f50a8
+	fromColumn: FactInternetSales.CurrencyKey
+	toColumn: DimCurrency.CurrencyKey
+
+relationship 0d396768-93c1-3799-e4d7-e612c9cbbf68
+	fromColumn: FactResellerSales.CurrencyKey
+	toColumn: DimCurrency.CurrencyKey
+
+relationship ca07b4ce-d9fb-9b90-ed17-5ce2e272ad98
+	fromColumn: DimEmployee.EmployeeKey
+	toColumn: FactSalesQuota.EmployeeKey
+
+relationship 5801afa8-8202-6d57-f337-5ed085b7ac19
+	fromColumn: DimDate.DateKey
+	toColumn: FactSalesQuota.DateKey
+

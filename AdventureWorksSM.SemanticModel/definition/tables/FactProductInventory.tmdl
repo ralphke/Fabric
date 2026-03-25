@@ -1,0 +1,72 @@
+table FactProductInventory
+	lineageTag: 160f6baa-1995-4d34-8f36-2cca501bce81
+	sourceLineageTag: [dbo].[FactProductInventory]
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ed37990b-c39a-483a-86ed-4ecc08e54caf
+		sourceLineageTag: ProductKey
+		summarizeBy: count
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: c632125e-8813-4173-abb4-e4a02d644561
+		sourceLineageTag: DateKey
+		summarizeBy: count
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitCost
+		dataType: double
+		lineageTag: ecb89f5f-d6d7-4bb4-9552-4b322c6d4205
+		sourceLineageTag: UnitCost
+		summarizeBy: sum
+		sourceColumn: UnitCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitsIn
+		dataType: int64
+		formatString: 0
+		lineageTag: 05abe9a3-ac3a-41b2-bff6-8dde99a8b9cd
+		sourceLineageTag: UnitsIn
+		summarizeBy: sum
+		sourceColumn: UnitsIn
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitsOut
+		dataType: int64
+		formatString: 0
+		lineageTag: 69d9691f-f4cd-48f4-96a4-19511d944eaf
+		sourceLineageTag: UnitsOut
+		summarizeBy: sum
+		sourceColumn: UnitsOut
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitsBalance
+		dataType: int64
+		formatString: 0
+		lineageTag: d1a052f6-f248-4184-b26d-282adc5b8040
+		sourceLineageTag: UnitsBalance
+		summarizeBy: sum
+		sourceColumn: UnitsBalance
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactProductInventory = entity
+		mode: directLake
+		source
+			entityName: FactProductInventory
+			schemaName: dbo
+			expressionSource: 'DirectLake - AdventureWorksDW'
+

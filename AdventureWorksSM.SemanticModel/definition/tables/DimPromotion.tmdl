@@ -1,0 +1,163 @@
+table DimPromotion
+	lineageTag: 7cc73222-f734-4b8a-b006-ef2297ed3c41
+	sourceLineageTag: [dbo].[DimPromotion]
+
+	column PromotionKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 735becf0-9d5a-4528-a108-5f47f1c3aa0d
+		sourceLineageTag: PromotionKey
+		summarizeBy: count
+		sourceColumn: PromotionKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column PromotionAlternateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 45ad02ce-af76-4cf8-92a8-8009fe60d413
+		sourceLineageTag: PromotionAlternateKey
+		summarizeBy: count
+		sourceColumn: PromotionAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishPromotionName
+		dataType: string
+		lineageTag: 1d263a5f-13f0-473c-862d-aa60cc8a5b40
+		sourceLineageTag: EnglishPromotionName
+		summarizeBy: none
+		sourceColumn: EnglishPromotionName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpanishPromotionName
+		dataType: string
+		lineageTag: 981fbf90-9b86-4c38-ada9-d1edd7d687a1
+		sourceLineageTag: SpanishPromotionName
+		summarizeBy: none
+		sourceColumn: SpanishPromotionName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrenchPromotionName
+		dataType: string
+		lineageTag: 74ed7832-350a-4b39-b093-09b5edd14fc6
+		sourceLineageTag: FrenchPromotionName
+		summarizeBy: none
+		sourceColumn: FrenchPromotionName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiscountPct
+		dataType: double
+		lineageTag: c6cc7d37-d083-40f3-ad17-52944931ecb9
+		sourceLineageTag: DiscountPct
+		summarizeBy: sum
+		sourceColumn: DiscountPct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EnglishPromotionType
+		dataType: string
+		lineageTag: 43c59ab1-7a8e-4e2a-8f2a-5cb24fa2edfe
+		sourceLineageTag: EnglishPromotionType
+		summarizeBy: none
+		sourceColumn: EnglishPromotionType
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpanishPromotionType
+		dataType: string
+		lineageTag: 6c13f304-8914-4bcb-a406-663a010ce430
+		sourceLineageTag: SpanishPromotionType
+		summarizeBy: none
+		sourceColumn: SpanishPromotionType
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrenchPromotionType
+		dataType: string
+		lineageTag: d7203b76-aeff-4edc-9da6-e2c2357e0d8c
+		sourceLineageTag: FrenchPromotionType
+		summarizeBy: none
+		sourceColumn: FrenchPromotionType
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishPromotionCategory
+		dataType: string
+		lineageTag: 4ce48900-2dd1-4dc9-8462-67ecbf9f8b94
+		sourceLineageTag: EnglishPromotionCategory
+		summarizeBy: none
+		sourceColumn: EnglishPromotionCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpanishPromotionCategory
+		dataType: string
+		lineageTag: 7441d345-e54a-42e0-bb98-525f6e6499e0
+		sourceLineageTag: SpanishPromotionCategory
+		summarizeBy: none
+		sourceColumn: SpanishPromotionCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrenchPromotionCategory
+		dataType: string
+		lineageTag: 5afa5190-8d37-4989-b6c0-cefae40d3451
+		sourceLineageTag: FrenchPromotionCategory
+		summarizeBy: none
+		sourceColumn: FrenchPromotionCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e8f4312c-b198-4338-873b-04d9c0aa9ae7
+		sourceLineageTag: StartDate
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 93e3e1a8-b3c6-4b19-be9c-3d3f375def15
+		sourceLineageTag: EndDate
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column MinQty
+		dataType: int64
+		formatString: 0
+		lineageTag: 167a7dfe-48bf-4000-83cd-361640382126
+		sourceLineageTag: MinQty
+		summarizeBy: sum
+		sourceColumn: MinQty
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaxQty
+		dataType: int64
+		formatString: 0
+		lineageTag: c8d5b18a-5ba9-4f60-8ef4-801c61943e35
+		sourceLineageTag: MaxQty
+		summarizeBy: sum
+		sourceColumn: MaxQty
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimPromotion = entity
+		mode: directLake
+		source
+			entityName: DimPromotion
+			schemaName: dbo
+			expressionSource: 'DirectLake - AdventureWorksDW'
+

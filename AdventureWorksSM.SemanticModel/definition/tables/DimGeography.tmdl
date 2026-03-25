@@ -1,0 +1,112 @@
+table DimGeography
+	lineageTag: f418cf98-bda5-4cc4-9e86-e950ae17c4db
+	sourceLineageTag: [dbo].[DimGeography]
+
+	column GeographyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a509640-d972-43bf-8832-ac41659d06a9
+		sourceLineageTag: GeographyKey
+		summarizeBy: none
+		sourceColumn: GeographyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: b2bbdb70-bc44-4216-bfa8-dcc6f2674948
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateProvinceCode
+		dataType: string
+		lineageTag: 13dc7326-3799-4987-bfde-2539087bc6af
+		sourceLineageTag: StateProvinceCode
+		summarizeBy: none
+		sourceColumn: StateProvinceCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateProvinceName
+		dataType: string
+		lineageTag: fc0af555-4bde-4c64-8fe9-731d30bcdf75
+		sourceLineageTag: StateProvinceName
+		summarizeBy: none
+		sourceColumn: StateProvinceName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryRegionCode
+		dataType: string
+		lineageTag: a2b33d4f-7e20-41c7-8389-a6c4a5571a54
+		sourceLineageTag: CountryRegionCode
+		summarizeBy: none
+		sourceColumn: CountryRegionCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishCountryRegionName
+		dataType: string
+		lineageTag: babbdd99-c7c1-491b-960d-79fee27c5d69
+		sourceLineageTag: EnglishCountryRegionName
+		summarizeBy: none
+		sourceColumn: EnglishCountryRegionName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpanishCountryRegionName
+		dataType: string
+		lineageTag: 75b1d92b-deb6-4368-a6dd-3f7bac3976d2
+		sourceLineageTag: SpanishCountryRegionName
+		summarizeBy: none
+		sourceColumn: SpanishCountryRegionName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrenchCountryRegionName
+		dataType: string
+		lineageTag: 011478b0-7d56-4477-afc2-72698e0dfea9
+		sourceLineageTag: FrenchCountryRegionName
+		summarizeBy: none
+		sourceColumn: FrenchCountryRegionName
+
+		annotation SummarizationSetBy = Automatic
+
+	column PostalCode
+		dataType: string
+		lineageTag: fa648757-51a2-4700-a066-6d28a77e6e15
+		sourceLineageTag: PostalCode
+		summarizeBy: none
+		sourceColumn: PostalCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 8cbaa4f8-6343-48ff-9e97-dc093e44a02f
+		sourceLineageTag: SalesTerritoryKey
+		summarizeBy: count
+		sourceColumn: SalesTerritoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column IpAddressLocator
+		dataType: string
+		lineageTag: f40e6963-0291-4b48-b88c-4404439f4429
+		sourceLineageTag: IpAddressLocator
+		summarizeBy: none
+		sourceColumn: IpAddressLocator
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimGeography = entity
+		mode: directLake
+		source
+			entityName: DimGeography
+			schemaName: dbo
+			expressionSource: 'DirectLake - AdventureWorksDW'
+

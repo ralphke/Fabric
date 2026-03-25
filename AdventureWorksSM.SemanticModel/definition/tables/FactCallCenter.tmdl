@@ -1,0 +1,140 @@
+table FactCallCenter
+	lineageTag: e0f9dfa6-2477-4815-920d-48aa95da2b66
+	sourceLineageTag: [dbo].[FactCallCenter]
+
+	column FactCallCenterID
+		dataType: int64
+		formatString: 0
+		lineageTag: 90045e35-3256-4b63-bfad-b9d95aafaff0
+		sourceLineageTag: FactCallCenterID
+		summarizeBy: count
+		sourceColumn: FactCallCenterID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 79287bf5-0661-4059-9721-3f253ca8898f
+		sourceLineageTag: DateKey
+		summarizeBy: count
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column WageType
+		dataType: string
+		lineageTag: 3c2444b7-cefb-4fde-898a-1f815b107eb9
+		sourceLineageTag: WageType
+		summarizeBy: none
+		sourceColumn: WageType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Shift
+		dataType: string
+		lineageTag: fea8c65f-2443-44ed-bba0-d1f44af6bae0
+		sourceLineageTag: Shift
+		summarizeBy: none
+		sourceColumn: Shift
+
+		annotation SummarizationSetBy = Automatic
+
+	column LevelOneOperators
+		dataType: int64
+		formatString: 0
+		lineageTag: 25cbeba2-96b9-44ed-a80e-4fcfc793ea80
+		sourceLineageTag: LevelOneOperators
+		summarizeBy: sum
+		sourceColumn: LevelOneOperators
+
+		annotation SummarizationSetBy = Automatic
+
+	column LevelTwoOperators
+		dataType: int64
+		formatString: 0
+		lineageTag: 1f12a7c0-9504-4082-8f80-069a1a865eef
+		sourceLineageTag: LevelTwoOperators
+		summarizeBy: sum
+		sourceColumn: LevelTwoOperators
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalOperators
+		dataType: int64
+		formatString: 0
+		lineageTag: 33e06120-67e4-449e-a709-955a84bb71d6
+		sourceLineageTag: TotalOperators
+		summarizeBy: sum
+		sourceColumn: TotalOperators
+
+		annotation SummarizationSetBy = Automatic
+
+	column Calls
+		dataType: int64
+		formatString: 0
+		lineageTag: 8196f114-fa30-4342-bc66-d3d49bb3a88c
+		sourceLineageTag: Calls
+		summarizeBy: sum
+		sourceColumn: Calls
+
+		annotation SummarizationSetBy = Automatic
+
+	column AutomaticResponses
+		dataType: int64
+		formatString: 0
+		lineageTag: 241011bc-3a9f-453b-a340-ba97b5a3e8aa
+		sourceLineageTag: AutomaticResponses
+		summarizeBy: sum
+		sourceColumn: AutomaticResponses
+
+		annotation SummarizationSetBy = Automatic
+
+	column Orders
+		dataType: int64
+		formatString: 0
+		lineageTag: 15e46969-2703-47f4-bf66-1c0b560014db
+		sourceLineageTag: Orders
+		summarizeBy: sum
+		sourceColumn: Orders
+
+		annotation SummarizationSetBy = Automatic
+
+	column IssuesRaised
+		dataType: int64
+		formatString: 0
+		lineageTag: 70e84566-bdd2-44ab-98b5-1c2959ba175b
+		sourceLineageTag: IssuesRaised
+		summarizeBy: sum
+		sourceColumn: IssuesRaised
+
+		annotation SummarizationSetBy = Automatic
+
+	column AverageTimePerIssue
+		dataType: int64
+		formatString: 0
+		lineageTag: e7d4e39e-7e5c-4a8d-8a0b-f089dc3e5b95
+		sourceLineageTag: AverageTimePerIssue
+		summarizeBy: sum
+		sourceColumn: AverageTimePerIssue
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServiceGrade
+		dataType: double
+		lineageTag: aeccb25a-7cec-4a10-a221-16ca6f13a86f
+		sourceLineageTag: ServiceGrade
+		summarizeBy: sum
+		sourceColumn: ServiceGrade
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition FactCallCenter = entity
+		mode: directLake
+		source
+			entityName: FactCallCenter
+			schemaName: dbo
+			expressionSource: 'DirectLake - AdventureWorksDW'
+

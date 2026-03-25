@@ -1,0 +1,40 @@
+table DimDepartmentGroup
+	lineageTag: 066b96bb-dab8-4759-bc1c-676a4100bcff
+	sourceLineageTag: [dbo].[DimDepartmentGroup]
+
+	column DepartmentGroupKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 4b01b9f8-7190-4bd7-bb69-22fab3678d16
+		sourceLineageTag: DepartmentGroupKey
+		summarizeBy: count
+		sourceColumn: DepartmentGroupKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentDepartmentGroupKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 5280e0e4-8384-4bfa-a01a-3e5adcc2f8c0
+		sourceLineageTag: ParentDepartmentGroupKey
+		summarizeBy: count
+		sourceColumn: ParentDepartmentGroupKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentGroupName
+		dataType: string
+		lineageTag: aaeb200b-d299-4701-bf44-ef381b6cc933
+		sourceLineageTag: DepartmentGroupName
+		summarizeBy: none
+		sourceColumn: DepartmentGroupName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimDepartmentGroup = entity
+		mode: directLake
+		source
+			entityName: DimDepartmentGroup
+			schemaName: dbo
+			expressionSource: 'DirectLake - AdventureWorksDW'
+

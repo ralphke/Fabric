@@ -1,0 +1,59 @@
+table DimOrganization
+	lineageTag: 4d8a19d7-9b67-49a0-b24a-5dd9f6a28c99
+	sourceLineageTag: [dbo].[DimOrganization]
+
+	column OrganizationKey
+		dataType: int64
+		formatString: 0
+		lineageTag: e6b77efe-ea92-4387-9e69-5007ddc59b4f
+		sourceLineageTag: OrganizationKey
+		summarizeBy: none
+		sourceColumn: OrganizationKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentOrganizationKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 04ed79ca-50df-4b3d-8bdf-3d46fd2be7fa
+		sourceLineageTag: ParentOrganizationKey
+		summarizeBy: none
+		sourceColumn: ParentOrganizationKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column PercentageOfOwnership
+		dataType: string
+		lineageTag: 329ebc9a-1a2e-43a1-a58e-d881c822ff43
+		sourceLineageTag: PercentageOfOwnership
+		summarizeBy: none
+		sourceColumn: PercentageOfOwnership
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrganizationName
+		dataType: string
+		lineageTag: 621883b9-7898-4cf4-86d3-169168e62f16
+		sourceLineageTag: OrganizationName
+		summarizeBy: none
+		sourceColumn: OrganizationName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 4436ea1e-915d-434d-a6f8-f37b097c73a6
+		sourceLineageTag: CurrencyKey
+		summarizeBy: none
+		sourceColumn: CurrencyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimOrganization = entity
+		mode: directLake
+		source
+			entityName: DimOrganization
+			schemaName: dbo
+			expressionSource: 'DirectLake - AdventureWorksDW'
+

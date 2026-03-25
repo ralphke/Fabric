@@ -1,0 +1,105 @@
+table DimAccount
+	lineageTag: 5b2757c2-aca9-442c-a239-e04a25fe3b4a
+	sourceLineageTag: [dbo].[DimAccount]
+
+	column AccountKey
+		dataType: int64
+		formatString: 0
+		lineageTag: c0014fcb-e23a-4b11-b2d6-0ad0f0b974fc
+		sourceLineageTag: AccountKey
+		summarizeBy: none
+		sourceColumn: AccountKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentAccountKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ade9e10e-7eda-4010-9720-bec12b6348ce
+		sourceLineageTag: ParentAccountKey
+		summarizeBy: none
+		sourceColumn: ParentAccountKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountCodeAlternateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: bce22904-e539-4529-aeb4-a62319ef58c6
+		sourceLineageTag: AccountCodeAlternateKey
+		summarizeBy: none
+		sourceColumn: AccountCodeAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentAccountCodeAlternateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: f14eb280-e704-4356-b1e8-b02bf0a48489
+		sourceLineageTag: ParentAccountCodeAlternateKey
+		summarizeBy: none
+		sourceColumn: ParentAccountCodeAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountDescription
+		dataType: string
+		lineageTag: 7bf883b0-0625-41e6-a5fb-7a915c16c883
+		sourceLineageTag: AccountDescription
+		summarizeBy: none
+		sourceColumn: AccountDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountType
+		dataType: string
+		lineageTag: 4dbedbbe-34c3-49ec-88f9-15d16f5f8eb6
+		sourceLineageTag: AccountType
+		summarizeBy: none
+		sourceColumn: AccountType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Operator
+		dataType: string
+		lineageTag: 8c40bab0-80b6-4965-b89f-676fa2ea83da
+		sourceLineageTag: Operator
+		summarizeBy: none
+		sourceColumn: Operator
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomMembers
+		dataType: string
+		lineageTag: 8778d6c9-a201-468d-988f-381bf18172f7
+		sourceLineageTag: CustomMembers
+		summarizeBy: none
+		sourceColumn: CustomMembers
+
+		annotation SummarizationSetBy = Automatic
+
+	column ValueType
+		dataType: string
+		lineageTag: d46c968c-5609-4695-b727-4f10a0a8277a
+		sourceLineageTag: ValueType
+		summarizeBy: none
+		sourceColumn: ValueType
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomMemberOptions
+		dataType: string
+		lineageTag: 0541f18b-f14a-48e2-b3d7-73ea20fb903c
+		sourceLineageTag: CustomMemberOptions
+		summarizeBy: none
+		sourceColumn: CustomMemberOptions
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimAccount = entity
+		mode: directLake
+		source
+			entityName: DimAccount
+			schemaName: dbo
+			expressionSource: 'DirectLake - AdventureWorksDW'
+

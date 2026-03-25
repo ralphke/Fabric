@@ -1,0 +1,58 @@
+table DimSalesTerritory
+	lineageTag: d634004e-6f79-454f-9c7e-50c778db913d
+	sourceLineageTag: [dbo].[DimSalesTerritory]
+
+	column SalesTerritoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b41daef-9d55-4f35-a379-11f4532e99c4
+		sourceLineageTag: SalesTerritoryKey
+		summarizeBy: count
+		sourceColumn: SalesTerritoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryAlternateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: dfa6d189-186b-49fc-a0d1-efce73bbdb58
+		sourceLineageTag: SalesTerritoryAlternateKey
+		summarizeBy: count
+		sourceColumn: SalesTerritoryAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryRegion
+		dataType: string
+		lineageTag: 89d160f4-329d-44ec-8f37-53d06114bf13
+		sourceLineageTag: SalesTerritoryRegion
+		summarizeBy: none
+		sourceColumn: SalesTerritoryRegion
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryCountry
+		dataType: string
+		lineageTag: ed58a053-9178-4116-9c3d-5d53aae534c5
+		sourceLineageTag: SalesTerritoryCountry
+		summarizeBy: none
+		sourceColumn: SalesTerritoryCountry
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryGroup
+		dataType: string
+		lineageTag: 805ee4d5-3972-45d2-8352-78b5de540a92
+		sourceLineageTag: SalesTerritoryGroup
+		summarizeBy: none
+		sourceColumn: SalesTerritoryGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimSalesTerritory = entity
+		mode: directLake
+		source
+			entityName: DimSalesTerritory
+			schemaName: dbo
+			expressionSource: 'DirectLake - AdventureWorksDW'
+
