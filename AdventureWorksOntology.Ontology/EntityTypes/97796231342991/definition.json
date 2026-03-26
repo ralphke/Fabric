@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "97796231342991",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "DimProductCategory",
+  "entityIdParts": [
+    "2731920648911415301"
+  ],
+  "displayNamePropertyId": null,
+  "namespaceType": "Imported",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "2731920648911415301",
+      "name": "ProductCategoryKey",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "2731920624807741936",
+      "name": "ProductCategoryAlternateKey",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "2731920600547486605",
+      "name": "EnglishProductCategoryName",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2731920579498564790",
+      "name": "SpanishProductCategoryName",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2731920550587271070",
+      "name": "FrenchProductCategoryName",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": []
+}

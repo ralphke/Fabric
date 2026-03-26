@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "7d0a2b72-d0d5-4b79-8fbc-b107f95cd6d5",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "FinanceKey",
+        "targetPropertyId": "2731916485862451298"
+      },
+      {
+        "sourceColumnName": "DateKey",
+        "targetPropertyId": "2731916458972152138"
+      },
+      {
+        "sourceColumnName": "OrganizationKey",
+        "targetPropertyId": "2731916433935039625"
+      },
+      {
+        "sourceColumnName": "DepartmentGroupKey",
+        "targetPropertyId": "2731916409749557006"
+      },
+      {
+        "sourceColumnName": "ScenarioKey",
+        "targetPropertyId": "2731916387190986962"
+      },
+      {
+        "sourceColumnName": "AccountKey",
+        "targetPropertyId": "2731916357039661910"
+      },
+      {
+        "sourceColumnName": "Amount",
+        "targetPropertyId": "2731916335199174938"
+      },
+      {
+        "sourceColumnName": "MSSQL_System_Uniquifier_482100758",
+        "targetPropertyId": "2731916308081711737"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "FactFinance",
+      "sourceSchema": "dbo"
+    }
+  }
+}

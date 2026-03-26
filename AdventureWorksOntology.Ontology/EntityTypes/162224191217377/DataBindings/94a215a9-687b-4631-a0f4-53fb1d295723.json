@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "94a215a9-687b-4631-a0f4-53fb1d295723",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "PromotionKey",
+        "targetPropertyId": "2731915158959548598"
+      },
+      {
+        "sourceColumnName": "PromotionAlternateKey",
+        "targetPropertyId": "2731915130796910071"
+      },
+      {
+        "sourceColumnName": "EnglishPromotionName",
+        "targetPropertyId": "2731915105606677180"
+      },
+      {
+        "sourceColumnName": "SpanishPromotionName",
+        "targetPropertyId": "2731915081767387089"
+      },
+      {
+        "sourceColumnName": "FrenchPromotionName",
+        "targetPropertyId": "2731915048781987316"
+      },
+      {
+        "sourceColumnName": "DiscountPct",
+        "targetPropertyId": "2731915029639954569"
+      },
+      {
+        "sourceColumnName": "EnglishPromotionType",
+        "targetPropertyId": "2731915002302105657"
+      },
+      {
+        "sourceColumnName": "SpanishPromotionType",
+        "targetPropertyId": "2731914978148990594"
+      },
+      {
+        "sourceColumnName": "FrenchPromotionType",
+        "targetPropertyId": "2731914951448280274"
+      },
+      {
+        "sourceColumnName": "EnglishPromotionCategory",
+        "targetPropertyId": "2731914926939217837"
+      },
+      {
+        "sourceColumnName": "SpanishPromotionCategory",
+        "targetPropertyId": "2731914905573128742"
+      },
+      {
+        "sourceColumnName": "FrenchPromotionCategory",
+        "targetPropertyId": "2731914878990425640"
+      },
+      {
+        "sourceColumnName": "StartDate",
+        "targetPropertyId": "2731914849526438955"
+      },
+      {
+        "sourceColumnName": "EndDate",
+        "targetPropertyId": "2731914825266024412"
+      },
+      {
+        "sourceColumnName": "MinQty",
+        "targetPropertyId": "2731914799432033356"
+      },
+      {
+        "sourceColumnName": "MaxQty",
+        "targetPropertyId": "2731914774354084817"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "DimPromotion",
+      "sourceSchema": "dbo"
+    }
+  }
+}

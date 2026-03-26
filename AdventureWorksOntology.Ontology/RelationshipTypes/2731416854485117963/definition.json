@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "2731416854485117963",
+  "name": "DimDate_has_FactSalesQuota",
+  "namespaceType": "Imported",
+  "source": {
+    "entityTypeId": "155793780897570"
+  },
+  "target": {
+    "entityTypeId": "84050409948556"
+  }
+}

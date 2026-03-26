@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "e3ede69f-0a7f-42c2-8018-ae5a8626518c",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "GeographyKey",
+        "targetPropertyId": "2731922584930068489"
+      },
+      {
+        "sourceColumnName": "City",
+        "targetPropertyId": "2731922556382575011"
+      },
+      {
+        "sourceColumnName": "StateProvinceCode",
+        "targetPropertyId": "2731922533524597492"
+      },
+      {
+        "sourceColumnName": "StateProvinceName",
+        "targetPropertyId": "2731922507298036255"
+      },
+      {
+        "sourceColumnName": "CountryRegionCode",
+        "targetPropertyId": "2731922479521088320"
+      },
+      {
+        "sourceColumnName": "EnglishCountryRegionName",
+        "targetPropertyId": "2731922454987688061"
+      },
+      {
+        "sourceColumnName": "SpanishCountryRegionName",
+        "targetPropertyId": "2731922430719099835"
+      },
+      {
+        "sourceColumnName": "FrenchCountryRegionName",
+        "targetPropertyId": "2731922404623210620"
+      },
+      {
+        "sourceColumnName": "PostalCode",
+        "targetPropertyId": "2731922376890034570"
+      },
+      {
+        "sourceColumnName": "SalesTerritoryKey",
+        "targetPropertyId": "2731922350680920143"
+      },
+      {
+        "sourceColumnName": "IpAddressLocator",
+        "targetPropertyId": "2731922326123271483"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "DimGeography",
+      "sourceSchema": "dbo"
+    }
+  }
+}

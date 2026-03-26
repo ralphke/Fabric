@@ -1,0 +1,132 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "b2b6d436-8b28-4309-a535-93797e5ea599",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "CustomerKey",
+        "targetPropertyId": "2731915907958791619"
+      },
+      {
+        "sourceColumnName": "GeographyKey",
+        "targetPropertyId": "2731915883714885853"
+      },
+      {
+        "sourceColumnName": "CustomerAlternateKey",
+        "targetPropertyId": "2731915857982422085"
+      },
+      {
+        "sourceColumnName": "Title",
+        "targetPropertyId": "2731915831959909708"
+      },
+      {
+        "sourceColumnName": "FirstName",
+        "targetPropertyId": "2731915803874935396"
+      },
+      {
+        "sourceColumnName": "MiddleName",
+        "targetPropertyId": "2731915780908655863"
+      },
+      {
+        "sourceColumnName": "LastName",
+        "targetPropertyId": "2731915755473228149"
+      },
+      {
+        "sourceColumnName": "NameStyle",
+        "targetPropertyId": "2731915729967237274"
+      },
+      {
+        "sourceColumnName": "BirthDate",
+        "targetPropertyId": "2731915702386949002"
+      },
+      {
+        "sourceColumnName": "MaritalStatus",
+        "targetPropertyId": "2731915676277846472"
+      },
+      {
+        "sourceColumnName": "Suffix",
+        "targetPropertyId": "2731915656445241167"
+      },
+      {
+        "sourceColumnName": "Gender",
+        "targetPropertyId": "2731915628901641297"
+      },
+      {
+        "sourceColumnName": "EmailAddress",
+        "targetPropertyId": "2731915602477823509"
+      },
+      {
+        "sourceColumnName": "YearlyIncome",
+        "targetPropertyId": "2731915580650559229"
+      },
+      {
+        "sourceColumnName": "TotalChildren",
+        "targetPropertyId": "2731915558637575844"
+      },
+      {
+        "sourceColumnName": "NumberChildrenAtHome",
+        "targetPropertyId": "2731915532456857560"
+      },
+      {
+        "sourceColumnName": "EnglishEducation",
+        "targetPropertyId": "2731915504281560572"
+      },
+      {
+        "sourceColumnName": "SpanishEducation",
+        "targetPropertyId": "2731915481040398141"
+      },
+      {
+        "sourceColumnName": "FrenchEducation",
+        "targetPropertyId": "2731915458747572317"
+      },
+      {
+        "sourceColumnName": "EnglishOccupation",
+        "targetPropertyId": "2731915431009291997"
+      },
+      {
+        "sourceColumnName": "SpanishOccupation",
+        "targetPropertyId": "2731915412835570138"
+      },
+      {
+        "sourceColumnName": "FrenchOccupation",
+        "targetPropertyId": "2731915384903565267"
+      },
+      {
+        "sourceColumnName": "HouseOwnerFlag",
+        "targetPropertyId": "2731915360790913833"
+      },
+      {
+        "sourceColumnName": "NumberCarsOwned",
+        "targetPropertyId": "2731915332177896821"
+      },
+      {
+        "sourceColumnName": "AddressLine1",
+        "targetPropertyId": "2731915307667235841"
+      },
+      {
+        "sourceColumnName": "AddressLine2",
+        "targetPropertyId": "2731915287735912668"
+      },
+      {
+        "sourceColumnName": "Phone",
+        "targetPropertyId": "2731915258995724413"
+      },
+      {
+        "sourceColumnName": "DateFirstPurchase",
+        "targetPropertyId": "2731915232644559444"
+      },
+      {
+        "sourceColumnName": "CommuteDistance",
+        "targetPropertyId": "2731915210934598969"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "DimCustomer",
+      "sourceSchema": "dbo"
+    }
+  }
+}

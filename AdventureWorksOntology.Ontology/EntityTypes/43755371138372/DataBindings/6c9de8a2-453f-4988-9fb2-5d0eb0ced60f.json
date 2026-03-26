@@ -1,0 +1,68 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "6c9de8a2-453f-4988-9fb2-5d0eb0ced60f",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "FactCallCenterID",
+        "targetPropertyId": "2731919952975719699"
+      },
+      {
+        "sourceColumnName": "DateKey",
+        "targetPropertyId": "2731919927945607842"
+      },
+      {
+        "sourceColumnName": "WageType",
+        "targetPropertyId": "2731919904225547094"
+      },
+      {
+        "sourceColumnName": "Shift",
+        "targetPropertyId": "2731919878883317372"
+      },
+      {
+        "sourceColumnName": "LevelOneOperators",
+        "targetPropertyId": "2731919851758769186"
+      },
+      {
+        "sourceColumnName": "LevelTwoOperators",
+        "targetPropertyId": "2731919827253835570"
+      },
+      {
+        "sourceColumnName": "TotalOperators",
+        "targetPropertyId": "2731919799032018065"
+      },
+      {
+        "sourceColumnName": "Calls",
+        "targetPropertyId": "2731919777289181771"
+      },
+      {
+        "sourceColumnName": "AutomaticResponses",
+        "targetPropertyId": "2731919749471669595"
+      },
+      {
+        "sourceColumnName": "Orders",
+        "targetPropertyId": "2731919726417082469"
+      },
+      {
+        "sourceColumnName": "IssuesRaised",
+        "targetPropertyId": "2731919699670014925"
+      },
+      {
+        "sourceColumnName": "AverageTimePerIssue",
+        "targetPropertyId": "2731919676042388820"
+      },
+      {
+        "sourceColumnName": "ServiceGrade",
+        "targetPropertyId": "2731919647343834573"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "FactCallCenter",
+      "sourceSchema": "dbo"
+    }
+  }
+}

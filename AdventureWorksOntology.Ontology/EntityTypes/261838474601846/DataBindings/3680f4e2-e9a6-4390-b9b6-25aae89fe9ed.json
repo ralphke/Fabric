@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "3680f4e2-e9a6-4390-b9b6-25aae89fe9ed",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "SalesTerritoryKey",
+        "targetPropertyId": "2731917896948392749"
+      },
+      {
+        "sourceColumnName": "SalesTerritoryAlternateKey",
+        "targetPropertyId": "2731917872793819092"
+      },
+      {
+        "sourceColumnName": "SalesTerritoryRegion",
+        "targetPropertyId": "2731917844576462600"
+      },
+      {
+        "sourceColumnName": "SalesTerritoryCountry",
+        "targetPropertyId": "2731917818610320241"
+      },
+      {
+        "sourceColumnName": "SalesTerritoryGroup",
+        "targetPropertyId": "2731917798272022059"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "DimSalesTerritory",
+      "sourceSchema": "dbo"
+    }
+  }
+}

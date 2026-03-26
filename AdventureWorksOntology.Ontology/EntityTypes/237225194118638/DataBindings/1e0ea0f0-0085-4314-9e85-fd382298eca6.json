@@ -1,0 +1,108 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "1e0ea0f0-0085-4314-9e85-fd382298eca6",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "SalesOrderNumber",
+        "targetPropertyId": "2731917109075164789"
+      },
+      {
+        "sourceColumnName": "SalesOrderLineNumber",
+        "targetPropertyId": "2731917084122422061"
+      },
+      {
+        "sourceColumnName": "CustomerKey",
+        "targetPropertyId": "2731917061006302876"
+      },
+      {
+        "sourceColumnName": "ProductKey",
+        "targetPropertyId": "2731917034574653625"
+      },
+      {
+        "sourceColumnName": "OrderDateKey",
+        "targetPropertyId": "2731916999563040475"
+      },
+      {
+        "sourceColumnName": "DueDateKey",
+        "targetPropertyId": "2731916966528860289"
+      },
+      {
+        "sourceColumnName": "ShipDateKey",
+        "targetPropertyId": "2731916936645690028"
+      },
+      {
+        "sourceColumnName": "PromotionKey",
+        "targetPropertyId": "2731916911985378746"
+      },
+      {
+        "sourceColumnName": "CurrencyKey",
+        "targetPropertyId": "2731916885524294610"
+      },
+      {
+        "sourceColumnName": "SalesTerritoryKey",
+        "targetPropertyId": "2731916858464793885"
+      },
+      {
+        "sourceColumnName": "OrderQuantity",
+        "targetPropertyId": "2731916838171966269"
+      },
+      {
+        "sourceColumnName": "UnitPrice",
+        "targetPropertyId": "2731916810183679213"
+      },
+      {
+        "sourceColumnName": "ExtendedAmount",
+        "targetPropertyId": "2731916783753472470"
+      },
+      {
+        "sourceColumnName": "UnitPriceDiscountPct",
+        "targetPropertyId": "2731916758449218816"
+      },
+      {
+        "sourceColumnName": "DiscountAmount",
+        "targetPropertyId": "2731916734023877412"
+      },
+      {
+        "sourceColumnName": "ProductStandardCost",
+        "targetPropertyId": "2731916713246676137"
+      },
+      {
+        "sourceColumnName": "TotalProductCost",
+        "targetPropertyId": "2731916687486628677"
+      },
+      {
+        "sourceColumnName": "SalesAmount",
+        "targetPropertyId": "2731916658961874592"
+      },
+      {
+        "sourceColumnName": "TaxAmount",
+        "targetPropertyId": "2731916632755652181"
+      },
+      {
+        "sourceColumnName": "FreightAmount",
+        "targetPropertyId": "2731916609009060113"
+      },
+      {
+        "sourceColumnName": "CarrierTrackingNumber",
+        "targetPropertyId": "2731916588925813080"
+      },
+      {
+        "sourceColumnName": "CustomerPONumber",
+        "targetPropertyId": "2731916562015208342"
+      },
+      {
+        "sourceColumnName": "RevisionNumber",
+        "targetPropertyId": "2731916534908874765"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "FactInternetSales",
+      "sourceSchema": "dbo"
+    }
+  }
+}

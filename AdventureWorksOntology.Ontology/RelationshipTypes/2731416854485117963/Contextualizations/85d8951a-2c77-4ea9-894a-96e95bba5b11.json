@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "85d8951a-2c77-4ea9-894a-96e95bba5b11",
+  "dataBindingTable": {
+    "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+    "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+    "sourceTableName": "DimDate",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "DateKey",
+      "targetPropertyId": "2731922267727241861"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "DateKey",
+      "targetPropertyId": "2731920454881444917"
+    }
+  ]
+}

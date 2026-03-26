@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "4c6cdd34-fd32-4895-9860-543560223228",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "ProductKey",
+        "targetPropertyId": "2731920156077467604"
+      },
+      {
+        "sourceColumnName": "DateKey",
+        "targetPropertyId": "2731920120008310136"
+      },
+      {
+        "sourceColumnName": "UnitCost",
+        "targetPropertyId": "2731920086240413361"
+      },
+      {
+        "sourceColumnName": "UnitsIn",
+        "targetPropertyId": "2731920061573605778"
+      },
+      {
+        "sourceColumnName": "UnitsOut",
+        "targetPropertyId": "2731920032723650373"
+      },
+      {
+        "sourceColumnName": "UnitsBalance",
+        "targetPropertyId": "2731920005897453022"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "FactProductInventory",
+      "sourceSchema": "dbo"
+    }
+  }
+}

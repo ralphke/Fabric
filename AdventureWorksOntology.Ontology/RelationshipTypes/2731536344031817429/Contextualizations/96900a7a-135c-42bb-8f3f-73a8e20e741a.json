@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "96900a7a-135c-42bb-8f3f-73a8e20e741a",
+  "dataBindingTable": {
+    "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+    "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+    "sourceTableName": "DimCustomer",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "CustomerKey",
+      "targetPropertyId": "2731915907958791619"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "GeographyKey",
+      "targetPropertyId": "2731922584930068489"
+    }
+  ]
+}

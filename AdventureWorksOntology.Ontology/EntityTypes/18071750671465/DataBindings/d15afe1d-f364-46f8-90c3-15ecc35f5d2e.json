@@ -1,0 +1,156 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "d15afe1d-f364-46f8-90c3-15ecc35f5d2e",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "ProductKey",
+        "targetPropertyId": "2731919052806269275"
+      },
+      {
+        "sourceColumnName": "ProductAlternateKey",
+        "targetPropertyId": "2731919026317291166"
+      },
+      {
+        "sourceColumnName": "ProductSubcategoryKey",
+        "targetPropertyId": "2731918997271706317"
+      },
+      {
+        "sourceColumnName": "WeightUnitMeasureCode",
+        "targetPropertyId": "2731918960821732389"
+      },
+      {
+        "sourceColumnName": "SizeUnitMeasureCode",
+        "targetPropertyId": "2731918932780513083"
+      },
+      {
+        "sourceColumnName": "EnglishProductName",
+        "targetPropertyId": "2731918906096928879"
+      },
+      {
+        "sourceColumnName": "SpanishProductName",
+        "targetPropertyId": "2731918883705000379"
+      },
+      {
+        "sourceColumnName": "FrenchProductName",
+        "targetPropertyId": "2731918857307757507"
+      },
+      {
+        "sourceColumnName": "StandardCost",
+        "targetPropertyId": "2731918831194470936"
+      },
+      {
+        "sourceColumnName": "FinishedGoodsFlag",
+        "targetPropertyId": "2731918806362372447"
+      },
+      {
+        "sourceColumnName": "Color",
+        "targetPropertyId": "2731918780358457772"
+      },
+      {
+        "sourceColumnName": "SafetyStockLevel",
+        "targetPropertyId": "2731918758646160957"
+      },
+      {
+        "sourceColumnName": "ReorderPoint",
+        "targetPropertyId": "2731918731632721086"
+      },
+      {
+        "sourceColumnName": "ListPrice",
+        "targetPropertyId": "2731918705389944661"
+      },
+      {
+        "sourceColumnName": "Size",
+        "targetPropertyId": "2731918685374799355"
+      },
+      {
+        "sourceColumnName": "SizeRange",
+        "targetPropertyId": "2731918657825338152"
+      },
+      {
+        "sourceColumnName": "Weight",
+        "targetPropertyId": "2731918633637604066"
+      },
+      {
+        "sourceColumnName": "DaysToManufacture",
+        "targetPropertyId": "2731918606974612487"
+      },
+      {
+        "sourceColumnName": "ProductLine",
+        "targetPropertyId": "2731918579125043034"
+      },
+      {
+        "sourceColumnName": "DealerPrice",
+        "targetPropertyId": "2731918560180354907"
+      },
+      {
+        "sourceColumnName": "Class",
+        "targetPropertyId": "2731918527817788211"
+      },
+      {
+        "sourceColumnName": "Style",
+        "targetPropertyId": "2731918505707058851"
+      },
+      {
+        "sourceColumnName": "ModelName",
+        "targetPropertyId": "2731918483592115828"
+      },
+      {
+        "sourceColumnName": "EnglishDescription",
+        "targetPropertyId": "2731918454847347313"
+      },
+      {
+        "sourceColumnName": "FrenchDescription",
+        "targetPropertyId": "2731918431032747497"
+      },
+      {
+        "sourceColumnName": "ChineseDescription",
+        "targetPropertyId": "2731918403647720255"
+      },
+      {
+        "sourceColumnName": "ArabicDescription",
+        "targetPropertyId": "2731918383834722126"
+      },
+      {
+        "sourceColumnName": "HebrewDescription",
+        "targetPropertyId": "2731918354373129692"
+      },
+      {
+        "sourceColumnName": "ThaiDescription",
+        "targetPropertyId": "2731918321497663827"
+      },
+      {
+        "sourceColumnName": "GermanDescription",
+        "targetPropertyId": "2731918299306374865"
+      },
+      {
+        "sourceColumnName": "JapaneseDescription",
+        "targetPropertyId": "2731918277633893877"
+      },
+      {
+        "sourceColumnName": "TurkishDescription",
+        "targetPropertyId": "2731918249039113061"
+      },
+      {
+        "sourceColumnName": "StartDate",
+        "targetPropertyId": "2731918222376719219"
+      },
+      {
+        "sourceColumnName": "EndDate",
+        "targetPropertyId": "2731918197434651125"
+      },
+      {
+        "sourceColumnName": "Status",
+        "targetPropertyId": "2731918178669298147"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "DimProduct",
+      "sourceSchema": "dbo"
+    }
+  }
+}

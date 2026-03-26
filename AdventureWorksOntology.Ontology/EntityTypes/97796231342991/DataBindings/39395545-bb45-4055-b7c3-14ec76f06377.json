@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "39395545-bb45-4055-b7c3-14ec76f06377",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "ProductCategoryKey",
+        "targetPropertyId": "2731920648911415301"
+      },
+      {
+        "sourceColumnName": "ProductCategoryAlternateKey",
+        "targetPropertyId": "2731920624807741936"
+      },
+      {
+        "sourceColumnName": "EnglishProductCategoryName",
+        "targetPropertyId": "2731920600547486605"
+      },
+      {
+        "sourceColumnName": "SpanishProductCategoryName",
+        "targetPropertyId": "2731920579498564790"
+      },
+      {
+        "sourceColumnName": "FrenchProductCategoryName",
+        "targetPropertyId": "2731920550587271070"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "DimProductCategory",
+      "sourceSchema": "dbo"
+    }
+  }
+}

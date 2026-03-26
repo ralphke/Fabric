@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "3c720a21-6467-4ea6-82c9-0a2fbfab2ccf",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "OrganizationKey",
+        "targetPropertyId": "2731916133104716312"
+      },
+      {
+        "sourceColumnName": "ParentOrganizationKey",
+        "targetPropertyId": "2731916107938952677"
+      },
+      {
+        "sourceColumnName": "PercentageOfOwnership",
+        "targetPropertyId": "2731916080718310407"
+      },
+      {
+        "sourceColumnName": "OrganizationName",
+        "targetPropertyId": "2731916054239997258"
+      },
+      {
+        "sourceColumnName": "CurrencyKey",
+        "targetPropertyId": "2731916032423525808"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "DimOrganization",
+      "sourceSchema": "dbo"
+    }
+  }
+}

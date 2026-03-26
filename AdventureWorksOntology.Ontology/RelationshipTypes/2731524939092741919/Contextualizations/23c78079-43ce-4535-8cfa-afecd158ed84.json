@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "23c78079-43ce-4535-8cfa-afecd158ed84",
+  "dataBindingTable": {
+    "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+    "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+    "sourceTableName": "DimReseller",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "ResellerKey",
+      "targetPropertyId": "2731919582541431399"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "GeographyKey",
+      "targetPropertyId": "2731922584930068489"
+    }
+  ]
+}

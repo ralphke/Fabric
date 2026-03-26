@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "2731455929416220006",
+  "name": "FactFinance_has_DimDate",
+  "namespaceType": "Imported",
+  "source": {
+    "entityTypeId": "221509974370928"
+  },
+  "target": {
+    "entityTypeId": "155793780897570"
+  }
+}

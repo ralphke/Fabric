@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "8c9a4477-18b4-4839-b7ec-e4cc5702d4db",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "ResellerKey",
+        "targetPropertyId": "2731919582541431399"
+      },
+      {
+        "sourceColumnName": "GeographyKey",
+        "targetPropertyId": "2731919556419241814"
+      },
+      {
+        "sourceColumnName": "ResellerAlternateKey",
+        "targetPropertyId": "2731919529477705810"
+      },
+      {
+        "sourceColumnName": "Phone",
+        "targetPropertyId": "2731919505322359595"
+      },
+      {
+        "sourceColumnName": "BusinessType",
+        "targetPropertyId": "2731919479546897159"
+      },
+      {
+        "sourceColumnName": "ResellerName",
+        "targetPropertyId": "2731919452639859654"
+      },
+      {
+        "sourceColumnName": "NumberEmployees",
+        "targetPropertyId": "2731919425159314476"
+      },
+      {
+        "sourceColumnName": "OrderFrequency",
+        "targetPropertyId": "2731919400304218248"
+      },
+      {
+        "sourceColumnName": "OrderMonth",
+        "targetPropertyId": "2731919377074007699"
+      },
+      {
+        "sourceColumnName": "FirstOrderYear",
+        "targetPropertyId": "2731919351762212361"
+      },
+      {
+        "sourceColumnName": "LastOrderYear",
+        "targetPropertyId": "2731919328674192428"
+      },
+      {
+        "sourceColumnName": "ProductLine",
+        "targetPropertyId": "2731919302752619931"
+      },
+      {
+        "sourceColumnName": "AddressLine1",
+        "targetPropertyId": "2731919275593619262"
+      },
+      {
+        "sourceColumnName": "AddressLine2",
+        "targetPropertyId": "2731919250139219829"
+      },
+      {
+        "sourceColumnName": "AnnualSales",
+        "targetPropertyId": "2731919230933954643"
+      },
+      {
+        "sourceColumnName": "BankName",
+        "targetPropertyId": "2731919204531285204"
+      },
+      {
+        "sourceColumnName": "MinPaymentType",
+        "targetPropertyId": "2731919175765334854"
+      },
+      {
+        "sourceColumnName": "MinPaymentAmount",
+        "targetPropertyId": "2731919153297968922"
+      },
+      {
+        "sourceColumnName": "AnnualRevenue",
+        "targetPropertyId": "2731919125496337732"
+      },
+      {
+        "sourceColumnName": "YearOpened",
+        "targetPropertyId": "2731919104066948613"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "DimReseller",
+      "sourceSchema": "dbo"
+    }
+  }
+}

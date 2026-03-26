@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "2731424833285845325",
+  "name": "DimEmployee_has_FactSalesQuota",
+  "namespaceType": "Imported",
+  "source": {
+    "entityTypeId": "132067999979614"
+  },
+  "target": {
+    "entityTypeId": "84050409948556"
+  }
+}

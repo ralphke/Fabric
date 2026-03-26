@@ -1,0 +1,92 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "0cda2a8a-06fc-43d9-b156-9e406c39a6e4",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "DateKey",
+        "targetPropertyId": "2731922267727241861"
+      },
+      {
+        "sourceColumnName": "FullDateAlternateKey",
+        "targetPropertyId": "2731922244035306417"
+      },
+      {
+        "sourceColumnName": "DayNumberOfWeek",
+        "targetPropertyId": "2731922217604512273"
+      },
+      {
+        "sourceColumnName": "EnglishDayNameOfWeek",
+        "targetPropertyId": "2731922194441097473"
+      },
+      {
+        "sourceColumnName": "SpanishDayNameOfWeek",
+        "targetPropertyId": "2731922172332835740"
+      },
+      {
+        "sourceColumnName": "FrenchDayNameOfWeek",
+        "targetPropertyId": "2731922145809455784"
+      },
+      {
+        "sourceColumnName": "DayNumberOfMonth",
+        "targetPropertyId": "2731922120093751531"
+      },
+      {
+        "sourceColumnName": "DayNumberOfYear",
+        "targetPropertyId": "2731922093572895619"
+      },
+      {
+        "sourceColumnName": "WeekNumberOfYear",
+        "targetPropertyId": "2731922068808612251"
+      },
+      {
+        "sourceColumnName": "EnglishMonthName",
+        "targetPropertyId": "2731922045563568603"
+      },
+      {
+        "sourceColumnName": "SpanishMonthName",
+        "targetPropertyId": "2731922022558921542"
+      },
+      {
+        "sourceColumnName": "FrenchMonthName",
+        "targetPropertyId": "2731921994118980911"
+      },
+      {
+        "sourceColumnName": "MonthNumberOfYear",
+        "targetPropertyId": "2731921968504222174"
+      },
+      {
+        "sourceColumnName": "CalendarQuarter",
+        "targetPropertyId": "2731921949457408126"
+      },
+      {
+        "sourceColumnName": "CalendarYear",
+        "targetPropertyId": "2731921922366478150"
+      },
+      {
+        "sourceColumnName": "CalendarSemester",
+        "targetPropertyId": "2731921897074342014"
+      },
+      {
+        "sourceColumnName": "FiscalQuarter",
+        "targetPropertyId": "2731921869763275031"
+      },
+      {
+        "sourceColumnName": "FiscalYear",
+        "targetPropertyId": "2731921845145873992"
+      },
+      {
+        "sourceColumnName": "FiscalSemester",
+        "targetPropertyId": "2731921813855409853"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "DimDate",
+      "sourceSchema": "dbo"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "0a00c5a0-e9c1-4f0c-a4ba-6eca3fa9294b",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "SalesQuotaKey",
+        "targetPropertyId": "2731920500744449092"
+      },
+      {
+        "sourceColumnName": "EmployeeKey",
+        "targetPropertyId": "2731920476936119072"
+      },
+      {
+        "sourceColumnName": "DateKey",
+        "targetPropertyId": "2731920454881444917"
+      },
+      {
+        "sourceColumnName": "SalesAmountQuota",
+        "targetPropertyId": "2731920429346097838"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "FactSalesQuota",
+      "sourceSchema": "dbo"
+    }
+  }
+}

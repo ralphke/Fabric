@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "707c11dc-15be-4e1c-8e05-37f3de01b071",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "AccountKey",
+        "targetPropertyId": "2731923152406296335"
+      },
+      {
+        "sourceColumnName": "ParentAccountKey",
+        "targetPropertyId": "2731923077952177325"
+      },
+      {
+        "sourceColumnName": "AccountCodeAlternateKey",
+        "targetPropertyId": "2731923041728415833"
+      },
+      {
+        "sourceColumnName": "ParentAccountCodeAlternateKey",
+        "targetPropertyId": "2731923019175307768"
+      },
+      {
+        "sourceColumnName": "AccountDescription",
+        "targetPropertyId": "2731922987039420061"
+      },
+      {
+        "sourceColumnName": "AccountType",
+        "targetPropertyId": "2731922959766734993"
+      },
+      {
+        "sourceColumnName": "Operator",
+        "targetPropertyId": "2731922934515136897"
+      },
+      {
+        "sourceColumnName": "CustomMembers",
+        "targetPropertyId": "2731922905551151623"
+      },
+      {
+        "sourceColumnName": "ValueType",
+        "targetPropertyId": "2731922884785489209"
+      },
+      {
+        "sourceColumnName": "CustomMemberOptions",
+        "targetPropertyId": "2731922852366091598"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "DimAccount",
+      "sourceSchema": "dbo"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "56c075e8-3d2a-4e75-9ea4-fb137a8a65f0",
+  "dataBindingTable": {
+    "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+    "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+    "sourceTableName": "DimProduct",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "ProductKey",
+      "targetPropertyId": "2731919052806269275"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "ProductSubcategoryKey",
+      "targetPropertyId": "2731921751913153443"
+    }
+  ]
+}

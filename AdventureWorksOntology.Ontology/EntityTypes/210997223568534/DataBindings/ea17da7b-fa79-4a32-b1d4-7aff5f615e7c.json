@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "ea17da7b-fa79-4a32-b1d4-7aff5f615e7c",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "SalesReasonKey",
+        "targetPropertyId": "2731916258896364642"
+      },
+      {
+        "sourceColumnName": "SalesReasonAlternateKey",
+        "targetPropertyId": "2731916231495141446"
+      },
+      {
+        "sourceColumnName": "SalesReasonName",
+        "targetPropertyId": "2731916206987261510"
+      },
+      {
+        "sourceColumnName": "SalesReasonReasonType",
+        "targetPropertyId": "2731916177638191355"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "DimSalesReason",
+      "sourceSchema": "dbo"
+    }
+  }
+}

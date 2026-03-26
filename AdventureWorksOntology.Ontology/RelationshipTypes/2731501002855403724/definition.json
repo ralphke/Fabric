@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "2731501002855403724",
+  "name": "DimProduct_has_DimProductSubcategory",
+  "namespaceType": "Imported",
+  "source": {
+    "entityTypeId": "18071750671465"
+  },
+  "target": {
+    "entityTypeId": "143143665205755"
+  }
+}

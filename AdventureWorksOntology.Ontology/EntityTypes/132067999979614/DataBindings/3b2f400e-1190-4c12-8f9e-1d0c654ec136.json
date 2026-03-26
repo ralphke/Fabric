@@ -1,0 +1,136 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "3b2f400e-1190-4c12-8f9e-1d0c654ec136",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "EmployeeKey",
+        "targetPropertyId": "2731921569298994231"
+      },
+      {
+        "sourceColumnName": "ParentEmployeeKey",
+        "targetPropertyId": "2731921544967454870"
+      },
+      {
+        "sourceColumnName": "EmployeeNationalIDAlternateKey",
+        "targetPropertyId": "2731921518445900696"
+      },
+      {
+        "sourceColumnName": "ParentEmployeeNationalIDAlternateKey",
+        "targetPropertyId": "2731921497651916468"
+      },
+      {
+        "sourceColumnName": "SalesTerritoryKey",
+        "targetPropertyId": "2731921472500506983"
+      },
+      {
+        "sourceColumnName": "FirstName",
+        "targetPropertyId": "2731921447125924884"
+      },
+      {
+        "sourceColumnName": "LastName",
+        "targetPropertyId": "2731921420871568980"
+      },
+      {
+        "sourceColumnName": "MiddleName",
+        "targetPropertyId": "2731921393427228927"
+      },
+      {
+        "sourceColumnName": "NameStyle",
+        "targetPropertyId": "2731921371601189013"
+      },
+      {
+        "sourceColumnName": "Title",
+        "targetPropertyId": "2731921347194915249"
+      },
+      {
+        "sourceColumnName": "HireDate",
+        "targetPropertyId": "2731921320643911117"
+      },
+      {
+        "sourceColumnName": "BirthDate",
+        "targetPropertyId": "2731921293893960453"
+      },
+      {
+        "sourceColumnName": "LoginID",
+        "targetPropertyId": "2731921268472090013"
+      },
+      {
+        "sourceColumnName": "EmailAddress",
+        "targetPropertyId": "2731921246723471091"
+      },
+      {
+        "sourceColumnName": "Phone",
+        "targetPropertyId": "2731921222689233231"
+      },
+      {
+        "sourceColumnName": "MaritalStatus",
+        "targetPropertyId": "2731921196886872802"
+      },
+      {
+        "sourceColumnName": "EmergencyContactName",
+        "targetPropertyId": "2731921172408222813"
+      },
+      {
+        "sourceColumnName": "EmergencyContactPhone",
+        "targetPropertyId": "2731921149456833986"
+      },
+      {
+        "sourceColumnName": "SalariedFlag",
+        "targetPropertyId": "2731921123882513556"
+      },
+      {
+        "sourceColumnName": "Gender",
+        "targetPropertyId": "2731921096089459394"
+      },
+      {
+        "sourceColumnName": "PayFrequency",
+        "targetPropertyId": "2731921073568654414"
+      },
+      {
+        "sourceColumnName": "BaseRate",
+        "targetPropertyId": "2731921047180480046"
+      },
+      {
+        "sourceColumnName": "VacationHours",
+        "targetPropertyId": "2731921025432230835"
+      },
+      {
+        "sourceColumnName": "SickLeaveHours",
+        "targetPropertyId": "2731921000143586096"
+      },
+      {
+        "sourceColumnName": "CurrentFlag",
+        "targetPropertyId": "2731920974438770490"
+      },
+      {
+        "sourceColumnName": "SalespersonFlag",
+        "targetPropertyId": "2731920948812544511"
+      },
+      {
+        "sourceColumnName": "DepartmentName",
+        "targetPropertyId": "2731920921239400389"
+      },
+      {
+        "sourceColumnName": "StartDate",
+        "targetPropertyId": "2731920898930942494"
+      },
+      {
+        "sourceColumnName": "EndDate",
+        "targetPropertyId": "2731920875164127847"
+      },
+      {
+        "sourceColumnName": "Status",
+        "targetPropertyId": "2731920846538881050"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "DimEmployee",
+      "sourceSchema": "dbo"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "fad6caa2-055d-4a4d-835b-7f4b65c0c27a",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "CurrencyKey",
+        "targetPropertyId": "2731918119627172779"
+      },
+      {
+        "sourceColumnName": "DateKey",
+        "targetPropertyId": "2731918097575384132"
+      },
+      {
+        "sourceColumnName": "AverageRate",
+        "targetPropertyId": "2731918075508526039"
+      },
+      {
+        "sourceColumnName": "EndOfDayRate",
+        "targetPropertyId": "2731918048913373739"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "524dfea1-0c59-477f-81bd-f4ad4461d8b9",
+      "itemId": "d3da9d6e-94db-4ad4-b139-447fc68c7900",
+      "sourceTableName": "FactCurrencyRate",
+      "sourceSchema": "dbo"
+    }
+  }
+}
